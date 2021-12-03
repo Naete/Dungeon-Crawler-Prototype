@@ -355,15 +355,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4014854206500105033, guid: b807812e6063127408b1f937e977fd6f, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.99999726
       objectReference: {fileID: 0}
     - target: {fileID: 4014854206500105033, guid: b807812e6063127408b1f937e977fd6f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4014854206500105033, guid: b807812e6063127408b1f937e977fd6f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.0023416965
       objectReference: {fileID: 0}
     - target: {fileID: 4014854206500105033, guid: b807812e6063127408b1f937e977fd6f, type: 3}
       propertyPath: m_LocalRotation.z
@@ -375,15 +375,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4014854206500105033, guid: b807812e6063127408b1f937e977fd6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -0.268
       objectReference: {fileID: 0}
     - target: {fileID: 4014854206500105033, guid: b807812e6063127408b1f937e977fd6f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4014854206500105140, guid: b807812e6063127408b1f937e977fd6f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4014854206500105141, guid: b807812e6063127408b1f937e977fd6f, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 4014854206500105141, guid: b807812e6063127408b1f937e977fd6f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4014854206500105142, guid: b807812e6063127408b1f937e977fd6f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b807812e6063127408b1f937e977fd6f, type: 3}
