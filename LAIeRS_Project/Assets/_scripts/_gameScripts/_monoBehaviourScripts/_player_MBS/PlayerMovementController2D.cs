@@ -23,7 +23,7 @@ namespace LAIeRS.Player
         
             _walkDirection = new Vector2(x, y).normalized;
         }
-    
+        
         private void FixedUpdate()
         { 
             _rigidBody2DComponent.velocity = _walkDirection * maxWalkSpeed;

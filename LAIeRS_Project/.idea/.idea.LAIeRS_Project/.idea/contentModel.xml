@@ -10,6 +10,9 @@
         <e p="_scripts" t="Include">
           <e p="_gameScripts" t="Include">
             <e p="_monoBehaviourScripts" t="Include">
+              <e p="_miscellanious_MBS" t="Include">
+                <e p="CharacterMovementController2D.cs" t="Include" />
+              </e>
               <e p="_player_MBS" t="Include">
                 <e p="PlayerIdentifier.cs" t="Include" />
                 <e p="PlayerMovementController2D.cs" t="Include" />
