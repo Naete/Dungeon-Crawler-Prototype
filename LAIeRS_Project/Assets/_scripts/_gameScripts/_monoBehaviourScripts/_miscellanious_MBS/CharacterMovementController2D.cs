@@ -56,7 +56,7 @@ namespace LAIeRS.Miscellanious
             
             RaycastHit2D hitInfo = Physics2D.Raycast(currentPos, direction, distance, _objectsToCollideWith);
             
-#if !UNITY_EDITOR
+#if UNITY_EDITOR
             Debug.DrawLine(currentPos, hitInfo.point);
 #endif
             
@@ -99,7 +99,7 @@ namespace LAIeRS.Miscellanious
             
             while (!_cancelTask && Vector2.Distance(currentPos, targetPos) > 0.1f)
             {
-#if !UNITY_EDITOR
+#if UNITY_EDITOR
                 Debug.DrawLine(currentPos, targetPos);
 #endif
                 currentPos = transform.position;
