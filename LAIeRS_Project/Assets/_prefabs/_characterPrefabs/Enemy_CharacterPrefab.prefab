@@ -134,12 +134,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f266aa23242d46144898b9161fcf91ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementSpeed: 1.5
+  _maxMovementSpeed: 2
+  _accelerationTime: 0.4
+  _decelerationTime: 0.2
   _objectsToCollideWith:
     serializedVersion: 2
     m_Bits: 1536
+  _showGizmo: 0
   _target: {fileID: 0}
+  _followRadius: 2
   _roamRadius: 3
-  _timeToWait: 2
-  _chanceToWait: 0.5
-  _remainingTimeToWait: 0
+  _timeToWait: 1.5
+  _chanceToWait: 0.7
