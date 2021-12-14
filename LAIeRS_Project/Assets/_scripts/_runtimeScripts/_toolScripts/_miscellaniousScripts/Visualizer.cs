@@ -4,35 +4,35 @@ using UnityEngine;
 
 public static class Visualizer
 {
-    public static void DrawLine(Vector2 startPos, Vector2 targetPos)
+    public static void DrawLineAt(Vector2 startPos, Vector2 targetPos)
     {
         Debug.DrawLine(startPos, targetPos);
     }
-    public static void DrawLine(Vector2 startPos, Vector2 targetPos, Color color)
+    public static void DrawLineAt(Vector2 startPos, Vector2 targetPos, Color color)
     {
         Debug.DrawLine(startPos, targetPos, color);
     }
-    public static void DrawLine(Vector2 startPos, Vector2 targetPos, Color color, float duration)
+    public static void DrawLineAt(Vector2 startPos, Vector2 targetPos, Color color, float duration)
     {
         Debug.DrawLine(startPos, targetPos, color, duration);
     }
     
-    public static void DrawCircle(Vector2 origin)
+    public static void DrawCircleAt(Vector2 origin)
     {
         float radius = 1;
-        DrawCircle(origin, radius);
+        DrawCircleAt(origin, radius);
     }
-    public static void DrawCircle(Vector2 origin, float radius)
+    public static void DrawCircleAt(Vector2 origin, float radius)
     {
         Color color = Color.green;
-        DrawCircle(origin, radius, color);
+        DrawCircleAt(origin, radius, color);
     }
-    public static void DrawCircle(Vector2 origin, float radius, Color color)
+    public static void DrawCircleAt(Vector2 origin, float radius, Color color)
     {
         float duration = 0.0f;
-        DrawCircle(origin, radius, color, duration);
+        DrawCircleAt(origin, radius, color, duration);
     }
-    public static void DrawCircle(Vector2 origin, float radius, Color color, float duration)
+    public static void DrawCircleAt(Vector2 origin, float radius, Color color, float duration)
     {
         float sharpness = 50;
         
@@ -56,7 +56,7 @@ public static class Visualizer
 
             var nextPos = new Vector2(cosValue, sinValue) + origin;
             
-            DrawLine(lastPos, nextPos, color, duration);
+            DrawLineAt(lastPos, nextPos, color, duration);
 
             lastPos = nextPos;
         }
@@ -79,7 +79,7 @@ public static class Visualizer
             Vector2 currentWayPoint = path[i];
             Vector2 targetWayPoint = path[i+1];
             
-            DrawLine(currentWayPoint, targetWayPoint, color, duration);
+            DrawLineAt(currentWayPoint, targetWayPoint, color, duration);
         }
     }
 }
