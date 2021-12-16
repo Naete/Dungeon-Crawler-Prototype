@@ -8,31 +8,18 @@ public static class Visualizer
     {
         Debug.DrawLine(startPos, targetPos);
     }
-    public static void DrawLine(Vector2 startPos, Vector2 targetPos, Color color)
-    {
-        Debug.DrawLine(startPos, targetPos, color);
-    }
-    public static void DrawLine(Vector2 startPos, Vector2 targetPos, Color color, float duration)
+    public static void DrawLine(Vector2 startPos, Vector2 targetPos, Color color, float duration = 0)
     {
         Debug.DrawLine(startPos, targetPos, color, duration);
     }
     
-    public static void DrawCircle(Vector2 origin)
-    {
-        float radius = 1;
-        DrawCircle(origin, radius);
-    }
-    public static void DrawCircle(Vector2 origin, float radius)
+    public static void DrawCircle(Vector2 origin, float radius = 1)
     {
         Color color = Color.green;
+        
         DrawCircle(origin, radius, color);
     }
-    public static void DrawCircle(Vector2 origin, float radius, Color color)
-    {
-        float duration = 0.0f;
-        DrawCircle(origin, radius, color, duration);
-    }
-    public static void DrawCircle(Vector2 origin, float radius, Color color, float duration)
+    public static void DrawCircle(Vector2 origin, float radius, Color color, float duration = 0)
     {
         float sharpness = 50;
         
@@ -61,18 +48,32 @@ public static class Visualizer
             lastPos = nextPos;
         }
     }
+    
+    public static void DrawSquareAt(Vector2 origin, float size = 1)
+    {
+        Color color = Color.green;
+
+        DrawSquareAt(origin, size, color);
+    }
+    public static void DrawSquareAt(Vector2 origin, float size, Color color, float duration = 0)
+    {
+        Vector2 topLeftCorner = origin + new Vector2(0, size);
+        Vector2 bottomRightCorner = origin + new Vector2(size, 0);
+        Vector2 topRightCorner = origin + new Vector2(size, size);
+        
+        DrawLine(origin, topLeftCorner, color, duration);
+        DrawLine(origin, bottomRightCorner, color, duration);
+        DrawLine(topLeftCorner, topRightCorner, color, duration);
+        DrawLine(bottomRightCorner, topRightCorner, color, duration);
+    }
 
     public static void DrawPath(IList<Vector2> path)
     {
         Color color = Color.green;
+        
         DrawPath(path, color);
     }
-    public static void DrawPath(IList<Vector2> path, Color color)
-    {
-        float duration = 0.0f;
-        DrawPath(path, color, duration);
-    }
-    public static void DrawPath(IList<Vector2> path, Color color, float duration)
+    public static void DrawPath(IList<Vector2> path, Color color, float duration = 0)
     {
         for (int i = 0; i < path.Count - 1; i++)
         {
