@@ -963,7 +963,7 @@ GameObject:
   - component: {fileID: 8219664957205447909}
   - component: {fileID: 4788473640476450441}
   - component: {fileID: 8986929824784882336}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Unwalkables
   m_TagString: Untagged
   m_Icon: {fileID: 0}
