@@ -1,13 +1,16 @@
 using System;
 
-public static class Utilities
+namespace LAIeRS.Miscellanious
 {
-    public static bool DiceChance(float chanceRate, float maxChanceRate = 1)
+    public static class Utilities
     {
-        if (chanceRate > maxChanceRate)
-            throw new Exception($"ChanceRate({chanceRate}) is higher than MaxChanceRate({maxChanceRate})." +
-                                $"ChanceRate must be within 0 and MaxChanceRate({maxChanceRate})");
+        public static bool DiceChance(float chanceRate, float maxChanceRate = 1)
+        {
+            if (chanceRate > maxChanceRate)
+                throw new Exception($"ChanceRate({chanceRate}) is higher than MaxChanceRate({maxChanceRate})." +
+                                    $"ChanceRate must be within 0 and MaxChanceRate({maxChanceRate})");
                 
-        return UnityEngine.Random.value < (chanceRate / maxChanceRate);
+            return UnityEngine.Random.value < (chanceRate / maxChanceRate);
+        }
     }
 }

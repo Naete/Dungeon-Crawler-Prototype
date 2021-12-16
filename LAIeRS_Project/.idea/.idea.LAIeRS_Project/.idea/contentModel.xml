@@ -17,15 +17,14 @@
             <e p="_gameScripts" t="Include">
               <e p="_dungeonGenerationScripts" t="Include">
                 <e p="GridDungeonGenerator2D.cs" t="Include" />
+                <e p="Room2D.cs" t="Include" />
               </e>
               <e p="_monoBehaviourScripts" t="Include">
                 <e p="_ai_MBS" t="Include">
                   <e p="AIMovementController2D.cs" t="Include" />
                 </e>
                 <e p="_levelGeneration_MBS" t="Include">
-                  <e p="Cluster2D.cs" t="Include" />
                   <e p="DungeonLevelCreator.cs" t="Include" />
-                  <e p="Room2D.cs" t="Include" />
                 </e>
                 <e p="_player_MBS" t="Include">
                   <e p="PlayerIdentifier.cs" t="Include" />
@@ -41,6 +40,7 @@
               </e>
               <e p="_miscellaniousScripts" t="Include">
                 <e p="Grid2D.cs" t="Include" />
+                <e p="Utilities.cs" t="Include" />
                 <e p="Visualizer.cs" t="Include" />
               </e>
               <e p="_pathfindingScripts" t="Include">

@@ -420,6 +420,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9731de46edc284999d1fea944f2843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _roomWidth: 20
+  _roomHeight: 13
+  _roomAmount: 25
 --- !u!1 &2127906443
 GameObject:
   m_ObjectHideFlags: 0
