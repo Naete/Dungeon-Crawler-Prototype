@@ -20,8 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07fe3319-98a0-4cf1-b191-d82563870617" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LAIeRS_Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LAIeRS_Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LAIeRS_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LAIeRS_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Visualizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Visualizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Generation.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Generation.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Room2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Room2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/DungeonLevelCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/DungeonLevelCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,8 +59,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A0EF933B-1AA5-4B66-8801-EA864E4204FE/f9/40f44cd7/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_ai_MBS/AIMovementController2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Room2D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Trigger2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FFDEA4C3-525D-4651-9E8B-EA7CF75E975C/fe/dc414605/Collider2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F2625FD8-44AA-4DD5-B6A3-882F24F14D79/48/ccfceb32/MethodImplAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Door2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/FFDEA4C3-525D-4651-9E8B-EA7CF75E975C/37/992625c9/02000022.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A0EF933B-1AA5-4B66-8801-EA864E4204FE/ee/debdd6a4/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
@@ -99,11 +106,13 @@
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/Room2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/Cluster2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Utilities.cs" />
-        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Room2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_extensiveMethodsScripts/GeneralExtensiveMethodsCollection.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/GridDungeonGenerator2D.cs" />
-        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/DungeonLevelCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Visualizer.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Door2D.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Trigger2D.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Room2D.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/DungeonLevelCreator.cs" />
       </list>
     </option>
   </component>
