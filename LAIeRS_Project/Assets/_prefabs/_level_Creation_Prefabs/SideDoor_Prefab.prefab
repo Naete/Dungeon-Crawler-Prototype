@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8311593564332660660}
   - component: {fileID: 8311593564332660663}
   m_Layer: 0
-  m_Name: SideDoor
+  m_Name: SideDoor_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

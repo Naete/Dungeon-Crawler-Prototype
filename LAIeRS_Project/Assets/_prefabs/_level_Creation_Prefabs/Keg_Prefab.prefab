@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7738725909345695339}
   - component: {fileID: 1319875452421960612}
   - component: {fileID: 7001418960813105427}
-  m_Layer: 0
-  m_Name: Keg
+  m_Layer: 10
+  m_Name: Keg_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
