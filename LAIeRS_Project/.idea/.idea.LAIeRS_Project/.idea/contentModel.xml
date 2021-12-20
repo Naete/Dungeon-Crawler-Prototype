@@ -19,6 +19,7 @@
                 <e p="Door2D.cs" t="Include" />
                 <e p="GridDungeonGenerator2D.cs" t="Include" />
                 <e p="Room2D.cs" t="Include" />
+                <e p="RoomContentGenerator2D.cs" t="Include" />
                 <e p="Trigger2D.cs" t="Include" />
               </e>
               <e p="_monoBehaviourScripts" t="Include">
