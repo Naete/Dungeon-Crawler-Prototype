@@ -36,6 +36,11 @@
                 <e p="MovementEnhancer.cs" t="Include" />
               </e>
             </e>
+            <e p="_scriptableObjectScripts" t="Include">
+              <e p="_gameSettingsScripts" t="Include">
+                <e p="GameSettings.cs" t="Include" />
+              </e>
+            </e>
             <e p="_toolScripts" t="Include">
               <e p="_extensiveMethodsScripts" t="Include">
                 <e p="GeneralExtensiveMethodsCollection.cs" t="Include" />
