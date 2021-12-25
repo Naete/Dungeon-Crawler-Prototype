@@ -8,9 +8,9 @@ namespace LAIeRS.DungeonGeneration
         
         public Vector2Int Position { get; }
 
-        public Door2D(Vector2Int doorPos)
+        public Door2D(Vector2Int doorPosition)
         {
-            Position = doorPos;
+            Position = doorPosition;
         }
     }
 }

@@ -4,19 +4,19 @@ namespace LAIeRS.ExtensiveMethods
 {
     public static class UnityExtensionMethods
     {
-        public static Vector2 GetDirectionTo(this Vector2 originPos, Vector2 targetPos)
+        public static Vector2 GetDirectionTo(this Vector2 originPosition, Vector2 targetPosition)
         {
-            return (targetPos - originPos).normalized;
+            return (targetPosition - originPosition).normalized;
         }
         
-        public static float GetDistanceTo(this Vector2 originPos, Vector2 targetPos)
+        public static float GetDistanceTo(this Vector2 originPosition, Vector2 targetPosition)
         {
-            return Vector2.Distance(originPos, targetPos);
+            return Vector2.Distance(originPosition, targetPosition);
         }
         
-        public static Vector3 GetDirectionTo(this Vector3 originPos, Vector3 targetPos)
+        public static Vector3 GetDirectionTo(this Vector3 originPosition, Vector3 targetPosition)
         {
-            return (targetPos - originPos).normalized;
+            return (targetPosition - originPosition).normalized;
         }
     }
 }

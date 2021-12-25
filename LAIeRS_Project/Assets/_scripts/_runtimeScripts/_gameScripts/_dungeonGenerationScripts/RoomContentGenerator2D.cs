@@ -24,21 +24,21 @@ public static class RoomContentGenerator2D
         }
 
         int amountOfObstacles = 10;
-        List<(int x, int y)> randomPos = new List<(int x, int y)>();
+        List<(int x, int y)> randomPositions = new List<(int x, int y)>();
         
         for (int i = 0; i < amountOfObstacles; i++)
         {
             int y = Random.Range(2, room.Height - 3);
             int x = Random.Range(4, room.Width - 4);
 
-            if (randomPos.Contains((x, y)))
+            if (randomPositions.Contains((x, y)))
             {
                 amountOfObstacles--;
                 continue;
             }
 
             room.ObstacleLayout.SetItemAtIndex(x, y, true);
-            randomPos.Add((x, y));
+            randomPositions.Add((x, y));
         }
     }
     
@@ -69,9 +69,9 @@ public static class RoomContentGenerator2D
             {
                 if (!skipIndexes.Contains((i, j)))
                 {
-                    Vector2Int tilePos = room.Position + new Vector2Int(i, j);
+                    Vector2Int tilePosition = room.Position + new Vector2Int(i, j);
                     
-                    tilemap.SetTile((Vector3Int)tilePos, tile);
+                    tilemap.SetTile((Vector3Int)tilePosition, tile);
                 }
             }
         }

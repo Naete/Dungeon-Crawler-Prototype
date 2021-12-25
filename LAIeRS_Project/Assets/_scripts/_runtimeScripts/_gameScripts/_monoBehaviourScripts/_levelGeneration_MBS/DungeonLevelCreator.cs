@@ -15,7 +15,7 @@ namespace LAIeRS.DungeonGeneration
         [SerializeField] private int _roomWidth = 20;
         [SerializeField] private int _roomHeight = 13;
         [SerializeField] private int _roomAmount = 10;
-        private Vector2Int _gridPos;
+        private Vector2Int _gridPosition;
         
         // TODO: Remove this and load assets from a asset loader
         [SerializeField] private TileBase _wallTile;
@@ -29,7 +29,7 @@ namespace LAIeRS.DungeonGeneration
             // Calculation to enable the dungeon generation to start from the grid center than left bottom corner
             // NOTE: The dungeon generation is not depending on this calculation,
             // so it can be removed when not needed anymore
-            _gridPos = new Vector2Int(
+            _gridPosition = new Vector2Int(
                 -_roomAmount * _roomWidth,
                 -_roomAmount * _roomHeight);
             
@@ -43,7 +43,7 @@ namespace LAIeRS.DungeonGeneration
                 _dungeonSize, _dungeonSize, 
                 _roomWidth, _roomHeight, 
                 _roomAmount, 
-                _gridPos);
+                _gridPosition);
 
             _gridDungeon.DrawGrid(Color.black, 1000);
             
@@ -58,13 +58,13 @@ namespace LAIeRS.DungeonGeneration
         }
         
         private Grid2D<Room2D> GenerateGridDungeon(
-            int dungeonWidth, int dungeonHeight, int roomWidth, int roomHeight, int roomAmount, Vector2Int gridPos)
+            int dungeonWidth, int dungeonHeight, int roomWidth, int roomHeight, int roomAmount, Vector2Int gridPosition)
         {
             Grid2D<Room2D> gridDungeon = GridDungeonGenerator2D.CreateGridDungeon(
                     dungeonWidth, dungeonHeight, 
                     roomWidth, roomHeight, 
                     roomAmount, 
-                    gridPos);
+                    gridPosition);
             
             // Next steps: generate room content, triggers, ...
             // List< (int i, int j)> skipIndexes = new List<(int i, int j)>();
@@ -84,8 +84,8 @@ namespace LAIeRS.DungeonGeneration
             // {
             //     if (room != null)
             //     {
-            //         Vector3 pos = (Vector2)room.Position;
-            //         Tilemap tilemap = Instantiate(_tilemap, pos, Quaternion.identity).GetComponent<Tilemap>();
+            //         Vector3 position = (Vector2)room.Position;
+            //         Tilemap tilemap = Instantiate(_tilemap, position, Quaternion.identity).GetComponent<Tilemap>();
             //         RoomContentGenerator2D.GenerateTilesFor(tilemap, _wallTile, room, 2, skipIndexes);
             //         room.WallTilemap = tilemap;
             //     }
@@ -103,12 +103,12 @@ namespace LAIeRS.DungeonGeneration
                 if (room != null)
                 {
                     if (room.Position == Vector2Int.zero)
-                        Visualizer.DrawSquareAt(room.CenterPos - new Vector2Int(5, 5), 10, Color.yellow, 100);
+                        Visualizer.DrawSquareAt(room.CenterPosition - new Vector2Int(5, 5), 10, Color.yellow, 100);
                     else
-                        Visualizer.DrawSquareAt(room.CenterPos - new Vector2Int(5, 5), 10, Color.gray, 100);
+                        Visualizer.DrawSquareAt(room.CenterPosition - new Vector2Int(5, 5), 10, Color.gray, 100);
                     
-                    foreach (var neighbourRoom in room.NeighbourRooms)
-                        Visualizer.DrawLine(room.CenterPos, neighbourRoom.CenterPos, Color.white, 100);
+                    foreach (Room2D neighbourRoom in room.NeighbourRooms)
+                        Visualizer.DrawLine(room.CenterPosition, neighbourRoom.CenterPosition, Color.white, 100);
                 }
             });
         }
@@ -126,10 +126,10 @@ namespace LAIeRS.DungeonGeneration
                         for (int x = 0; x < room.Width; x++)
                         {
                             if (room.GroundLayout.GetItemAtIndex(x, y))
-                                Visualizer.DrawSquareAt(room.GroundLayout.GetPosAtIndex(x, y), 1, Color.gray, 100);
+                                Visualizer.DrawSquareAt(room.GroundLayout.GetPositionAtIndex(x, y), 1, Color.gray, 100);
                     
                             if (room.ObstacleLayout.GetItemAtIndex(x, y))
-                                Visualizer.DrawCircle(room.ObstacleLayout.GetPosAtIndex(x, y) + new Vector2(0.5f, 0.5f), 0.5f, Color.red, 100);
+                                Visualizer.DrawCircle(room.ObstacleLayout.GetPositionAtIndex(x, y) + new Vector2(0.5f, 0.5f), 0.5f, Color.red, 100);
                         }
                     }
                     
@@ -138,7 +138,7 @@ namespace LAIeRS.DungeonGeneration
                         for (int x = 0; x < room.WallLayout.Width; x++)
                         {
                             if (room.WallLayout.GetItemAtIndex(x, y))
-                                Visualizer.DrawSquareAt(room.WallLayout.GetPosAtIndex(x, y), 2, Color.white, 100);
+                                Visualizer.DrawSquareAt(room.WallLayout.GetPositionAtIndex(x, y), 2, Color.white, 100);
                         }
                     }
                 }

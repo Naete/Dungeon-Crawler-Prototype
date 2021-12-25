@@ -5,23 +5,23 @@ using UnityEngine;
 public static class Visualizer
 {
     // TODO: Replace Vector2 by Vector3
-    public static void DrawLine(Vector2 originPos, Vector2 targetPos, float duration = 0)
+    public static void DrawLine(Vector2 originPosition, Vector2 targetPosition, float duration = 0)
     {
         Color color = Color.green;
-        Debug.DrawLine(originPos, targetPos, color, duration);
+        Debug.DrawLine(originPosition, targetPosition, color, duration);
     }
-    public static void DrawLine(Vector2 originPos, Vector2 targetPos, Color color, float duration = 0)
+    public static void DrawLine(Vector2 originPosition, Vector2 targetPosition, Color color, float duration = 0)
     {
-        Debug.DrawLine(originPos, targetPos, color, duration);
+        Debug.DrawLine(originPosition, targetPosition, color, duration);
     }
     
-    public static void DrawCircle(Vector2 originPos, float radius = 1, float duration = 0)
+    public static void DrawCircle(Vector2 originPosition, float radius = 1, float duration = 0)
     {
         Color color = Color.green;
         
-        DrawCircle(originPos, radius, color, duration);
+        DrawCircle(originPosition, radius, color, duration);
     }
-    public static void DrawCircle(Vector2 originPos, float radius, Color color, float duration = 0)
+    public static void DrawCircle(Vector2 originPosition, float radius, Color color, float duration = 0)
     {
         float sharpness = 50;
         
@@ -32,7 +32,7 @@ public static class Visualizer
         
         sharpness = (2 * Mathf.PI) / sharpness;
 
-        Vector2 lastPos = new Vector2(Mathf.Cos(0) * radius, Mathf.Sin(0) * radius) + originPos;
+        Vector2 lastPosition = new Vector2(Mathf.Cos(0) * radius, Mathf.Sin(0) * radius) + originPosition;
 
         float counter = 0;
 
@@ -43,47 +43,47 @@ public static class Visualizer
             float sinValue = Mathf.Sin(counter) * radius;
             float cosValue = Mathf.Cos(counter) * radius;
 
-            var nextPos = new Vector2(cosValue, sinValue) + originPos;
+            var nextPosition = new Vector2(cosValue, sinValue) + originPosition;
             
-            DrawLine(lastPos, nextPos, color, duration);
+            DrawLine(lastPosition, nextPosition, color, duration);
 
-            lastPos = nextPos;
+            lastPosition = nextPosition;
         }
     }
     
-    public static void DrawSquareAt(Vector2 originPos, float size = 1, float duration = 0)
+    public static void DrawSquareAt(Vector2 originPosition, float size = 1, float duration = 0)
     {
         Color color = Color.green;
 
-        DrawSquareAt(originPos, size, color, duration);
+        DrawSquareAt(originPosition, size, color, duration);
     }
-    public static void DrawSquareAt(Vector2 originPos, float size, Color color, float duration = 0)
+    public static void DrawSquareAt(Vector2 originPosition, float size, Color color, float duration = 0)
     {
-        Vector2 topLeftCorner = originPos + new Vector2(0, size);
-        Vector2 bottomRightCorner = originPos + new Vector2(size, 0);
-        Vector2 topRightCorner = originPos + new Vector2(size, size);
+        Vector2 topLeftCornerPosition = originPosition + new Vector2(0, size);
+        Vector2 bottomRightCornerPosition = originPosition + new Vector2(size, 0);
+        Vector2 topRightCornerPosition = originPosition + new Vector2(size, size);
         
-        DrawLine(originPos, topLeftCorner, color, duration);
-        DrawLine(originPos, bottomRightCorner, color, duration);
-        DrawLine(topLeftCorner, topRightCorner, color, duration);
-        DrawLine(bottomRightCorner, topRightCorner, color, duration);
+        DrawLine(originPosition, topLeftCornerPosition, color, duration);
+        DrawLine(originPosition, bottomRightCornerPosition, color, duration);
+        DrawLine(topLeftCornerPosition, topRightCornerPosition, color, duration);
+        DrawLine(bottomRightCornerPosition, topRightCornerPosition, color, duration);
     }
 
-    public static void DrawRectangleAt(Vector2 originPos, Vector2 size, float duration = 0)
+    public static void DrawRectangleAt(Vector2 originPosition, Vector2 size, float duration = 0)
     {
         Color color = Color.green;
-        DrawRectangleAt(originPos, size, color, duration);
+        DrawRectangleAt(originPosition, size, color, duration);
     }
-    public static void DrawRectangleAt(Vector2 originPos, Vector2 size, Color color, float duration = 0)
+    public static void DrawRectangleAt(Vector2 originPosition, Vector2 size, Color color, float duration = 0)
     {
-        Vector2 topLeftCorner = originPos + new Vector2(0, size.y);
-        Vector2 bottomRightCorner = originPos + new Vector2(size.x, 0);
-        Vector2 topRightCorner = originPos + size;
+        Vector2 topLeftCornerPosition = originPosition + new Vector2(0, size.y);
+        Vector2 bottomRightCornerPosition = originPosition + new Vector2(size.x, 0);
+        Vector2 topRightCornerPosition = originPosition + size;
         
-        DrawLine(originPos, topLeftCorner, color, duration);
-        DrawLine(originPos, bottomRightCorner, color, duration);
-        DrawLine(topLeftCorner, topRightCorner, color, duration);
-        DrawLine(bottomRightCorner, topRightCorner, color, duration);
+        DrawLine(originPosition, topLeftCornerPosition, color, duration);
+        DrawLine(originPosition, bottomRightCornerPosition, color, duration);
+        DrawLine(topLeftCornerPosition, topRightCornerPosition, color, duration);
+        DrawLine(bottomRightCornerPosition, topRightCornerPosition, color, duration);
     }
     
     public static void DrawPath(IList<Vector2> path, float duration = 0)
