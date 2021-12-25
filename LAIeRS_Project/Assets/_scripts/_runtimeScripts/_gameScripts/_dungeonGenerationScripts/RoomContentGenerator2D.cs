@@ -54,26 +54,4 @@ public static class RoomContentGenerator2D
         }
     }
     
-    // TODO: Look out for a better alternative to Unitys tilemap component
-    public static void GenerateTilesFor(
-        Tilemap tilemap, TileBase tile, Room2D room, int cellSize, List<(int i, int j)> skipIndexes = null)
-    {
-        if (skipIndexes == null)
-            skipIndexes = new List<(int i, int j)>();
-        
-        int tilemapHeight = room.Height / cellSize;
-        int tilemapWidth = room.Width / cellSize;
-        
-        for (int j = 0; j < tilemapHeight; j++) {
-            for (int i = 0; i < tilemapWidth; i++)
-            {
-                if (!skipIndexes.Contains((i, j)))
-                {
-                    Vector2Int tilePosition = room.Position + new Vector2Int(i, j);
-                    
-                    tilemap.SetTile((Vector3Int)tilePosition, tile);
-                }
-            }
-        }
-    }
 }

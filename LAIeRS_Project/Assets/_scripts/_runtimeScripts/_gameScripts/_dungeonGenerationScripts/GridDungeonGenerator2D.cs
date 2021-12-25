@@ -54,17 +54,14 @@ namespace LAIeRS.DungeonGeneration
                     
                     if (neighbourRoom != null)
                     {
-                        // TODO: Replace magic number "0.2f" by variable and remove the comment
-                        // Chance to connect the selected and neighbour room
-                        if (Utilities.DiceChance(0.2f) && selectedRoom.NeighbourRooms.NotContains(neighbourRoom))
+                        if (Utilities.DiceChance(GameSettings.CHANCE_CONNECT_ROOMS) 
+                            && selectedRoom.NeighbourRooms.NotContains(neighbourRoom))
                             ConnectRooms(selectedRoom, neighbourRoom);
                         
                         continue;
                     }
 
-                    // TODO: Replace magic number "0.5f" by variable and remove the comment
-                    // Chance to not create the neighbourRoom
-                    if (Utilities.DiceChance(0.5f)) continue;
+                    if (Utilities.DiceChance(GameSettings.CHANCE_NOT_CREATE_ROOM)) continue;
                     
                     neighbourRoom = new Room2D(roomWidth, roomHeight, neighbourRoomPosition.x, neighbourRoomPosition.y);
                     
