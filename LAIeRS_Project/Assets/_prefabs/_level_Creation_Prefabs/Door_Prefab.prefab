@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 8030594888223954923}
   - component: {fileID: 7515978074872082133}
   - component: {fileID: 2961335815331388137}
-  - component: {fileID: 1796105870322412643}
-  - component: {fileID: 365302742972372448}
   m_Layer: 0
   m_Name: Door_Prefab
   m_TagString: Untagged
@@ -71,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 432641825
-  m_SortingLayer: 3
+  m_SortingLayerID: 1998231751
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 69ce5f196ec2c1749b3786aaa1c04aa0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -84,7 +82,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!61 &2961335815331388137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -98,10 +96,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.4963337, y: 0.23220468}
+  m_Offset: {x: 0, y: 0.22790885}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 3, y: 3}
     newSize: {x: 3, y: 2.5}
     adaptiveTilingThreshold: 0.5
@@ -109,37 +107,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0540779, y: 0.302979}
+  m_Size: {x: 3, y: 0.4558177}
   m_EdgeRadius: 0
---- !u!58 &1796105870322412643
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9005305867507030718}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.2470423, y: 0.24279988}
-  serializedVersion: 2
-  m_Radius: 0.25723624
---- !u!58 &365302742972372448
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9005305867507030718}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 2.7565217, y: 0.24279988}
-  serializedVersion: 2
-  m_Radius: 0.25631428

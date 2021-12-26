@@ -29,6 +29,13 @@
                 <e p="_levelGeneration_MBS" t="Include">
                   <e p="DungeonLevelCreator.cs" t="Include" />
                 </e>
+                <e p="_manager_MBS" t="Include">
+                  <e p="_eventManager_MBS" t="Include">
+                    <e p="EventID.cs" t="Include" />
+                    <e p="EventManager.cs" t="Include" />
+                    <e p="EventParam.cs" t="Include" />
+                  </e>
+                </e>
                 <e p="_player_MBS" t="Include">
                   <e p="PlayerIdentifier.cs" t="Include" />
                   <e p="PlayerMovementController2D.cs" t="Include" />
@@ -48,6 +55,7 @@
               </e>
               <e p="_miscellaniousScripts" t="Include">
                 <e p="Grid2D.cs" t="Include" />
+                <e p="Sandbox.cs" t="Include" />
                 <e p="Utilities.cs" t="Include" />
                 <e p="Visualizer.cs" t="Include" />
               </e>

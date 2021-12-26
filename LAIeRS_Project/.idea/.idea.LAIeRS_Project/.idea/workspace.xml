@@ -21,46 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="07fe3319-98a0-4cf1-b191-d82563870617" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LAIeRS_Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LAIeRS_Project/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.LAIeRS_Project/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LAIeRS_Project/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LAIeRS_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LAIeRS_Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Generation Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Generation Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MovemMovement Controls Scene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MovemMovement Controls Scene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/2x2 Tilemap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/2x2 Tilemap.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/BottomCornerWallPlacerHolderSprite.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/BottomCornerWallPlacerHolderSprite.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/BottomRightCornerWallPlacerHolderSprite.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/BottomRightCornerWallPlacerHolderSprite.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/FrontDoorPlaceHolderSprite.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/FrontDoorPlaceHolderSprite.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/OpenSideideDoorPlaceHolderSprite.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/OpenSideideDoorPlaceHolderSprite.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/SideDoorPlaceHolderSprite.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/SideDoorPlaceHolderSprite.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/SideWallPlaceHolderSprite.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/SideWallPlaceHolderSprite.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/TopCornerwallPlacerHolderSprite.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/TopCornerwallPlacerHolderSprite.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/TopRightCornerwallPlacerHolderSprite.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/TopRightCornerwallPlacerHolderSprite.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/UpwardsOpenFrontDoorPlaceHolderSprite.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/UpwardsOpenFrontDoorPlaceHolderSprite.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/WallPlacerHolderSprite.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/WallPlacerHolderSprite.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/GridDungeonGenerator2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/GridDungeonGenerator2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/RoomContentGenerator2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/RoomContentGenerator2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_uniqueGameObjects/Main_CameraPrefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_uniqueGameObjects/Main_CameraPrefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_uniqueGameObjects/Player_CharacterPrefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_uniqueGameObjects/Player_CharacterPrefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Trigger2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Trigger2D.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/DungeonLevelCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/DungeonLevelCreator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_pathfindingScripts/Node2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/52409DF4-7EEC-4FF4-A3E5-A5BE37682D54/a1/a5777409/BuildPipelineInterfaces.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A0EF933B-1AA5-4B66-8801-EA864E4204FE/03/bda62673/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_manager_MBS/_eventManager_MBS/EventID.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_player_MBS/PlayerIdentifier.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/31C0F51A-C5A2-4A22-BA78-4DB24F4BA023/51/fe981da8/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/51C9FC2D-1BE0-48CF-A2DD-679DEAA7D4F7/87/a0953a8c/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
@@ -102,6 +72,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BCE5E9CF-72A6-4554-937D-40E2CE78291E/3b/24c99a83/TilemapRenderer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A0EF933B-1AA5-4B66-8801-EA864E4204FE/7b/c4397991/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BB425196-9FB4-4E5D-80D8-C754D05E61F7/6c/d6e8e68c/GridLayout.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_manager_MBS/_eventManager_MBS/EventParam.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/42/6ac22760/YieldAwaitable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A0EF933B-1AA5-4B66-8801-EA864E4204FE/cd/dc541eab/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/695D1CC9-3CCA-4506-9C52-8C15C9FDD749/71/013afad3/Task.cs" root0="SKIP_HIGHLIGHTING" />
@@ -114,6 +85,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FFDEA4C3-525D-4651-9E8B-EA7CF75E975C/fe/dc414605/Collider2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F2625FD8-44AA-4DD5-B6A3-882F24F14D79/48/ccfceb32/MethodImplAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/RoomContentGenerator2D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Sandbox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_manager_MBS/_eventManager_MBS/EventManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/FFDEA4C3-525D-4651-9E8B-EA7CF75E975C/37/992625c9/02000022.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A0EF933B-1AA5-4B66-8801-EA864E4204FE/ee/debdd6a4/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/GridPaintPaletteClipboard.cs" root0="SKIP_HIGHLIGHTING" />
@@ -152,7 +125,6 @@
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/Cluster2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Utilities.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_extensiveMethodsScripts/GeneralExtensiveMethodsCollection.cs" />
-        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Trigger2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/SpriteOverlapFix.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Tilemap2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Tile2D.cs" />
@@ -167,10 +139,15 @@
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/DungeonConfiguration.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/GameSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_scriptableObjectsScripts/_gameSettingsScripts/GameSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/DungeonLevelCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_scriptableObjectScripts/_gameSettingsScripts/GameSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/RoomContentGenerator2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/GridDungeonGenerator2D.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_manager_MBS/_eventManager_MBS/EventParam.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/DungeonLevelCreator.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_manager_MBS/_eventManager_MBS/EventID.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Sandbox.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_manager_MBS/_eventManager_MBS/EventManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Trigger2D.cs" />
       </list>
     </option>
   </component>
