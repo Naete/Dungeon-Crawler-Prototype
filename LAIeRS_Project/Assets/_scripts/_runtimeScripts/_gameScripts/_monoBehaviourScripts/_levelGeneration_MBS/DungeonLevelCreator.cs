@@ -1,5 +1,3 @@
-using System;
-using LAIeRS.Events;
 using UnityEngine;
 
 using LAIeRS.Miscellanious;
@@ -26,7 +24,7 @@ namespace LAIeRS.DungeonGeneration
                 _gameSettings.RoomWidth, _gameSettings.RoomHeight, 
                 _gameSettings.InitialRoomAmount, 
                 _gameSettings.InitialGridPosition);
-
+            
             _gridDungeon.DrawGrid(Color.black, 1000);
             
             //ShowGridMap1();
@@ -53,7 +51,7 @@ namespace LAIeRS.DungeonGeneration
             
             return gridDungeon;
         }
-
+        
         private void ShowGridMap1()
         {
             Vector2 padding = new Vector2(4, 4);

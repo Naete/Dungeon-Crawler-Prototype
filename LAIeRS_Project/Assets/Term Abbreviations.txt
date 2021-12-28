@@ -1,0 +1,4 @@
+MBS = MonobehaviourScript(s)
+
+SOS = ScriptableObjectScript(s)
+SO = ScriptableObject

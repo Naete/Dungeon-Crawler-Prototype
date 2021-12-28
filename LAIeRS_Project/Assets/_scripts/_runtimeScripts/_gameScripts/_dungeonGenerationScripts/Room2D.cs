@@ -9,10 +9,10 @@ namespace LAIeRS.DungeonGeneration
     {
         public GameObject GameObjectReference;
         
+        // TODO: Remove tilemaps and layouts
         public Tilemap GroundTilemap;
         public Tilemap ObstacleTilemap;
         public Tilemap WallTilemap;
-
         public Grid2D<bool> GroundLayout;
         public Grid2D<bool> ObstacleLayout;
         public Grid2D<bool> WallLayout;

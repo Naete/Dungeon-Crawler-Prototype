@@ -1,24 +1,42 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 using LAIeRS.Events;
 
-public class Sandbox : MonoBehaviour
+namespace LAIeRS.Sandbox
 {
-    [SerializeField] private BoxCollider2D doorCollider;
-    
-    private void Awake()
+    public class Sandbox : MonoBehaviour
     {
-        EventManager.AddListenerTo(EventID.ON_OPEN_DOORS, OpenDoors);
-        EventManager.AddListenerTo(EventID.ON_CLOSE_DOORS, CloseDoors);
-    }
+        [SerializeField] private List<Animator> doorAnimator;
+    
+        private void Awake()
+        {
+            EventManager.AddListenerTo(EventID.ON_OPEN_DOORS, OpenDoor);
+            EventManager.AddListenerTo(EventID.ON_CLOSE_DOORS, CloseDoor);
+        }
 
-    private void OpenDoors()
-    {
-        doorCollider.enabled = false;
-    }
-    
-    private void CloseDoors()
-    {
-        doorCollider.enabled = true;
+        private void OpenDoor()
+        {
+            foreach (var animator in doorAnimator)
+            {
+                if (!animator.GetBool("IsOpen"))
+                {
+                    animator.SetTrigger("DoorTrigger");
+                    animator.SetBool("IsOpen", true);
+                }
+            }
+        }
+
+        private void CloseDoor()
+        {
+            foreach (var animator in doorAnimator)
+            {
+                if (animator.GetBool("IsOpen"))
+                {
+                    animator.SetTrigger("DoorTrigger");
+                    animator.SetBool("IsOpen", false);
+                }
+            }
+        }
     }
 }

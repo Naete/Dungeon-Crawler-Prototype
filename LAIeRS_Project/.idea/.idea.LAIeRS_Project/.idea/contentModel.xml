@@ -5,6 +5,7 @@
     <e p="C:\Users\BATES\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_LAIeRS_Project.-1217991628.00" t="ExcludeRecursive" />
     <e p="C:\Users\BATES\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
     <e p="S:\Unity Projekte\LAIeRS\LAIeRS_Project" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_scripts" t="Include">
           <e p="_editorScript" t="Include">
@@ -44,7 +45,7 @@
               </e>
             </e>
             <e p="_scriptableObjectScripts" t="Include">
-              <e p="_gameSettingsScripts" t="Include">
+              <e p="_gameSettings_SOS" t="Include">
                 <e p="GameSettings.cs" t="Include" />
               </e>
             </e>
@@ -67,6 +68,7 @@
             <e p="Project.asmdef" t="Include" />
           </e>
         </e>
+        <e p="Glossar.txt" t="Include" />
       </e>
       <e p="LAIeRS_Project.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
