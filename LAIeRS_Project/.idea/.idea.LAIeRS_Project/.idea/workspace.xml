@@ -20,55 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07fe3319-98a0-4cf1-b191-d82563870617" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.LAIeRS_Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LAIeRS_Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.LAIeRS_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.LAIeRS_Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level Generation Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level Generation Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/1x1 Tilemap.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_environmentGraphics/_tilemapGraphics/1x1 Tilemap.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_animations/_environmentAnimations/_doorAnimations/FrontDoor_AnimationController.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_animations/_environmentAnimations/_doorAnimations/FrontDoor_AnimationController.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/BottomEndSideWallPlaceHolderSprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/BottomEndSideWallPlaceHolderSprite.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/BottomEndSideWallPlaceHolderSprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/BottomEndSideWallPlaceHolderSprite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/BottomLeftCornerWallPlacerHolderSprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/BottomLeftCornerWallPlacerHolderSprite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/BottomRightCornerWallPlacerHolderSprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/BottomRightCornerWallPlacerHolderSprite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/OpenSideideDoorPlaceHolderSprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/OpenSideideDoorPlaceHolderSprite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/OpenSideideDoorPlaceHolderSprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/OpenSideideDoorPlaceHolderSprite.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/TopEndSideWallPlaceHolderSprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/TopEndSideWallPlaceHolderSprite.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/TopEndSideWallPlaceHolderSprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/TopEndSideWallPlaceHolderSprite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/TopLeftCornerwallPlacerHolderSprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/TopLeftCornerwallPlacerHolderSprite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/TopRightCornerwallPlacerHolderSprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/TopRightCornerwallPlacerHolderSprite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/UpwardsOpenFrontDoorPlaceHolderSprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/UpwardsOpenFrontDoorPlaceHolderSprite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/obstaclePlaceHolderSprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/obstaclePlaceHolderSprite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/sideDoorPlaceHolderSprite.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/sideDoorPlaceHolderSprite.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/sideDoorPlaceHolderSprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/sideDoorPlaceHolderSprite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/sideWallPlaceHolderSprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/sideWallPlaceHolderSprite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/wallPlacerHolderSprite.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_graphics/_placeHolderGraphics/wallPlacerHolderSprite.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/BottomCornerWall_Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/BottomCornerWall_Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/Door_Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/Door_Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/Keg_Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/Keg_Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/Room_Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/Room_Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/SideDoor_Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/SideDoor_Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/SideWall_Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/SideWall_Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/TopCornerWall_Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/TopCornerWall_Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/Trigger_Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/Trigger_Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/Wall_Prefab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/Wall_Prefab.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_uniqueGameObjects/EventManager.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_uniqueGameObjects/EventManager.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_uniqueGameObjects/MainCamera.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/_uniqueGameObjects/MainCamera.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_uniqueGameObjects/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/_uniqueGameObjects/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/_interactablePrefabs/Door_Prefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/_interactablePrefabs/Door_Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/_interactablePrefabs/SideDoor_Prefab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/_interactablePrefabs/SideDoor_Prefab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/_roomPrefabs/Room_Example1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_prefabs/_level_Creation_Prefabs/_roomPrefabs/Room_Example1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Room2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Room2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Trigger2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Trigger2D.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/RoomContentGenerator2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/RoomContentGenerator2D.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/DungeonLevelCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/DungeonLevelCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_scriptableObjectScripts/_gameSettingsScripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_scriptableObjectScripts/_gameSettingsScripts/GameSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_scriptableObjectScripts/_gameSettingsScripts/GameSettings.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_manager_MBS/_eventManager_MBS/EventID.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_manager_MBS/_eventManager_MBS/EventID.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_extensiveMethodsScripts/GeneralExtensiveMethodsCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_extensiveMethodsScripts/GeneralExtensiveMethodsCollection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Grid2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Grid2D.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Sandbox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Sandbox.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_tiles/WallRuleTile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_tiles/WallRuleTile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,14 +64,19 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A0EF933B-1AA5-4B66-8801-EA864E4204FE/03/bda62673/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_manager_MBS/_eventManager_MBS/EventID.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_player_MBS/PlayerIdentifier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F2625FD8-44AA-4DD5-B6A3-882F24F14D79/a2/a67c2151/IFormattable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/31C0F51A-C5A2-4A22-BA78-4DB24F4BA023/51/fe981da8/NullReferenceException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/51C9FC2D-1BE0-48CF-A2DD-679DEAA7D4F7/87/a0953a8c/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5DB060C2-E1A7-4066-83B7-D65D782D6ADE/d4/0ab201e1/UnitySynchronizationContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F2625FD8-44AA-4DD5-B6A3-882F24F14D79/6f/bcf6d567/IEquatable`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_ai_MBS/AIMovementController2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_player_MBS/PlayerMovementController2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Room2D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A0EF933B-1AA5-4B66-8801-EA864E4204FE/d5/7053246b/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/MovementEnhancer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A0EF933B-1AA5-4B66-8801-EA864E4204FE/8a/00178d16/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Door2D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_camera_MBS/FollowObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/A0EF933B-1AA5-4B66-8801-EA864E4204FE/9b/5ee4a1e1/Vector2Int.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5DB060C2-E1A7-4066-83B7-D65D782D6ADE/4a/fb5e8872/Debug.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5DB060C2-E1A7-4066-83B7-D65D782D6ADE/cf/a18ee8a2/MinAttribute.cs" root0="SKIP_HIGHLIGHTING" />
@@ -119,7 +97,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BCE5E9CF-72A6-4554-937D-40E2CE78291E/b1/3ad5018b/Tilemap.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/IL/BCE5E9CF-72A6-4554-937D-40E2CE78291E/af/23e84be0/0200000A.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BCE5E9CF-72A6-4554-937D-40E2CE78291E/cf/cc219d39/TileBase.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Trigger2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FFDEA4C3-525D-4651-9E8B-EA7CF75E975C/fe/dc414605/Collider2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F2625FD8-44AA-4DD5-B6A3-882F24F14D79/48/ccfceb32/MethodImplAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/RoomContentGenerator2D.cs" root0="FORCE_HIGHLIGHTING" />
@@ -135,7 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/_scripts/_gameScripts/_monoBehaviourScripts/_miscellanious_MBS/FollowTarget2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_toolScripts/_pathfindingScripts/Node2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_toolScripts/_extensiveMethodsScripts/GeneralExtensiveMethodsCollection.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_gameScripts/_monoBehaviourScripts/_miscellanious_MBS/CharacterMovementController2D.cs" />
@@ -161,31 +137,32 @@
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/Room2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/Cluster2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Utilities.cs" />
-        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_extensiveMethodsScripts/GeneralExtensiveMethodsCollection.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/SpriteOverlapFix.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Tilemap2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Tile2D.cs" />
-        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Door2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_ai_MBS/AIMovementController2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_player_MBS/PlayerMovementController2D.cs" />
-        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_extensiveMethodsScripts/UnityExtensionMethodsCollection.cs" />
-        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Grid2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_pathfindingScripts/AStarPathfinding2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Visualizer.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/DungeonConfiguration.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/GameSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_scriptableObjectsScripts/_gameSettingsScripts/GameSettings.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_scriptableObjectScripts/_gameSettingsScripts/GameSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/RoomContentGenerator2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/GridDungeonGenerator2D.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_manager_MBS/_eventManager_MBS/EventParam.cs" />
-        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_manager_MBS/_eventManager_MBS/EventID.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_manager_MBS/_eventManager_MBS/EventManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/DungeonLevelCreator.cs" />
-        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Sandbox.cs" />
         <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Trigger2D.cs" />
-        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Room2D.cs" />
         <option value="$PROJECT_DIR$/Assets/Glossar.txt" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Door2D.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_extensiveMethodsScripts/UnityExtensionMethodsCollection.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/Room2D.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Grid2D.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_miscellaniousScripts/Sandbox.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_manager_MBS/_eventManager_MBS/EventID.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_camera_MBS/FollowObject.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_toolScripts/_extensiveMethodsScripts/GeneralExtensiveMethodsCollection.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_dungeonGenerationScripts/RoomContentGenerator2D.cs" />
+        <option value="$PROJECT_DIR$/Assets/_scripts/_runtimeScripts/_gameScripts/_monoBehaviourScripts/_levelGeneration_MBS/DungeonLevelCreator.cs" />
       </list>
     </option>
   </component>
@@ -311,9 +288,9 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="92" y="92" width="1736" height="896" key="VCS.FileHistoryDialog/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1639277014542" />
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1640692766178">
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1640700070761">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1640692766178" />
+    <state x="623" y="235" width="672" height="678" key="search.everywhere.popup/0.0.1920.1080/-1920.0.1536.864@0.0.1920.1080" timestamp="1640700070761" />
   </component>
 </project>

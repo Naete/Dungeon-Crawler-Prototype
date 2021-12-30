@@ -68,9 +68,15 @@ namespace LAIeRS.Miscellanious
         
         public void Foreach(Action<T> enumerationObject)
         {
-            for (int y = 0; y < Height - 1; y++)
+            for (int y = 0; y < Height - 1; y++) {
                 for (int x = 0; x < Width - 1; x++)
-                    enumerationObject(GetItemAtIndex(x, y));
+                {
+                    T item = GetItemAtIndex(x, y);
+                    
+                    if (item != null)
+                        enumerationObject(item);
+                }
+            }
         }
         
         public T GetItemAtIndex(int i, int j)

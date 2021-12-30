@@ -1,5 +1,8 @@
+using System.Collections.Generic;
+
 using UnityEngine;
 
+using LAIeRS.ExtensiveMethods;
 using LAIeRS.Miscellanious;
 
 namespace LAIeRS.DungeonGeneration
@@ -7,9 +10,11 @@ namespace LAIeRS.DungeonGeneration
     public class DungeonLevelCreator : MonoBehaviour
     {
         private Grid2D<Room2D> _gridDungeon;
-
+        
         [SerializeField] private GameSettings _gameSettings;
-
+        [SerializeField] private List<GameObject> _testRoomPrefabs;
+        [SerializeField] private GameObject _testDoorPrefab;
+        
         // TODO: Remove start function and generate levels through a level loader class
         private void Start()
         {
@@ -27,8 +32,8 @@ namespace LAIeRS.DungeonGeneration
             
             _gridDungeon.DrawGrid(Color.black, 1000);
             
-            //ShowGridMap1();
-            ShowGridMap2();
+            ShowGridMap1();
+            //ShowGridMap2();
             
             // 2. Create cluster-based dungeon
             
@@ -46,8 +51,18 @@ namespace LAIeRS.DungeonGeneration
                     roomAmount, 
                     gridPosition);
             
-            // Next steps: generate room content, triggers, ...
+            System.Random randomizer = new System.Random();
             
+            // Generate rooms
+            gridDungeon.Foreach(room =>
+            {
+                room.GameObjectReference = Instantiate(_testRoomPrefabs.GetRandomItem(randomizer), (Vector2)room.Position, Quaternion.identity);
+
+                RoomContentGenerator2D.CreateEntrancesFor(room, doorPosition =>
+                {
+                    Instantiate(_testDoorPrefab, doorPosition, Quaternion.identity);
+                });
+            });
             
             return gridDungeon;
         }
@@ -58,26 +73,23 @@ namespace LAIeRS.DungeonGeneration
             
             _gridDungeon.Foreach(room =>
             {
-                if (room != null)
-                {
-                    Vector2 roomSize = new Vector2(_gameSettings.RoomWidth, _gameSettings.RoomHeight) - padding;
+                Vector2 roomSize = new Vector2(_gameSettings.RoomWidth, _gameSettings.RoomHeight) - padding;
                     
-                    if (room.Position == Vector2Int.zero)
-                        Visualizer.DrawRectangleAt(
-                            room.Position + padding / 2,
-                            roomSize,
-                            Color.yellow, 
-                            100);
-                    else
-                        Visualizer.DrawRectangleAt(
-                            room.Position + padding / 2,
-                            roomSize,
-                            Color.gray, 
-                            100);
+                if (room.Position == Vector2Int.zero)
+                    Visualizer.DrawRectangleAt(
+                        room.Position + padding / 2,
+                        roomSize,
+                        Color.yellow, 
+                        100);
+                else
+                    Visualizer.DrawRectangleAt(
+                        room.Position + padding / 2,
+                        roomSize,
+                        Color.gray, 
+                        100);
                     
-                    foreach (Room2D neighbourRoom in room.NeighbourRooms)
-                        Visualizer.DrawLine(room.CenterPosition, neighbourRoom.CenterPosition, Color.white, 100);
-                }
+                foreach (Room2D neighbourRoom in room.NeighbourRooms)
+                    Visualizer.DrawLine(room.CenterPosition, neighbourRoom.CenterPosition, Color.white, 100);
             });
         }
         
@@ -85,29 +97,26 @@ namespace LAIeRS.DungeonGeneration
         {
             _gridDungeon.Foreach(room =>
             {
-                if (room != null)
-                {
-                    RoomContentGenerator2D.GenerateContentFor(room);
+                RoomContentGenerator2D.GenerateContentFor(room);
                     
-                    // Drawing 1x1 tiles
-                    for (int y = 0; y < room.Height; y++) {
-                        for (int x = 0; x < room.Width; x++)
-                        {
-                            if (room.GroundLayout.GetItemAtIndex(x, y))
-                                Visualizer.DrawSquareAt(room.GroundLayout.GetPositionAtIndex(x, y), 1, Color.gray, 100);
+                // Drawing 1x1 tiles
+                for (int y = 0; y < room.Height; y++) {
+                    for (int x = 0; x < room.Width; x++)
+                    {
+                        if (room.GroundLayout.GetItemAtIndex(x, y))
+                            Visualizer.DrawSquareAt(room.GroundLayout.GetPositionAtIndex(x, y), 1, Color.gray, 100);
                     
-                            if (room.ObstacleLayout.GetItemAtIndex(x, y))
-                                Visualizer.DrawCircle(room.ObstacleLayout.GetPositionAtIndex(x, y) + new Vector2(0.5f, 0.5f), 0.5f, Color.red, 100);
-                        }
+                        if (room.ObstacleLayout.GetItemAtIndex(x, y))
+                            Visualizer.DrawCircle(room.ObstacleLayout.GetPositionAtIndex(x, y) + new Vector2(0.5f, 0.5f), 0.5f, Color.red, 100);
                     }
+                }
                     
-                    // Drawing 2x2 tiles
-                    for (int y = 0; y < room.WallLayout.Height; y++) {
-                        for (int x = 0; x < room.WallLayout.Width; x++)
-                        {
-                            if (room.WallLayout.GetItemAtIndex(x, y))
-                                Visualizer.DrawSquareAt(room.WallLayout.GetPositionAtIndex(x, y), 2, Color.white, 100);
-                        }
+                // Drawing 2x2 tiles
+                for (int y = 0; y < room.WallLayout.Height; y++) {
+                    for (int x = 0; x < room.WallLayout.Width; x++)
+                    {
+                        if (room.WallLayout.GetItemAtIndex(x, y))
+                            Visualizer.DrawSquareAt(room.WallLayout.GetPositionAtIndex(x, y), 2, Color.white, 100);
                     }
                 }
             });

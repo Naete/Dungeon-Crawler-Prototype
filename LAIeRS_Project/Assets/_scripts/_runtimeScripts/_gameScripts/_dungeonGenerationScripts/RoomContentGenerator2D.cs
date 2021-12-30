@@ -1,9 +1,12 @@
+using System;
 using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 using LAIeRS.DungeonGeneration;
+using LAIeRS.ExtensiveMethods;
+using Random = UnityEngine.Random;
 
 public static class RoomContentGenerator2D
 {
@@ -14,6 +17,44 @@ public static class RoomContentGenerator2D
         GenerateWallLayoutFor(room);
     }
 
+    // TODO: Refactor
+    public static void CreateEntrancesFor(Room2D room, Action<Vector2> CreateDoorAt)
+    {
+        Tilemap wallTilemap = 
+            room.GameObjectReference.transform.Find("Grid 2x2").transform.Find("Walls").GetComponent<Tilemap>();
+
+        int tilemapHalfWidth = Mathf.CeilToInt((float)room.Width / 4);
+        int tilemapHalfHeight = Mathf.CeilToInt((float)room.Height / 4);
+        Vector2Int tilemapCenterPosition = new Vector2Int(tilemapHalfWidth - 1, tilemapHalfHeight - 1);
+                    
+        Vector2 roomPosition = room.Position;
+                    
+        foreach (Room2D neighbourRoom in room.NeighbourRooms)
+        {
+            Vector2Int directionToNeighbourRoom = 
+                Vector2Int.RoundToInt(roomPosition.GetDirectionTo(neighbourRoom.Position));
+
+            Vector3Int targetPosition = (Vector3Int)tilemapCenterPosition;
+
+            while (true)
+            {
+                if (wallTilemap.GetTile(targetPosition) != null)
+                {
+                    wallTilemap.SetTile(targetPosition, null);
+                    CreateDoorAt((Vector3)roomPosition + (Vector3)targetPosition * 2);
+                    break;
+                }
+
+                if (targetPosition.x <= 0 || targetPosition.y <= 0 ||
+                    targetPosition.x >= wallTilemap.size.x - 1 ||
+                    targetPosition.y >= wallTilemap.size.y - 1)
+                    break;
+
+                targetPosition += (Vector3Int)directionToNeighbourRoom;
+            }
+        }
+    }
+    
     private static void GenerateObstacleLayoutFor(Room2D room)
     {
         for (int y = 0; y < room.Height; y++) {
@@ -53,5 +94,4 @@ public static class RoomContentGenerator2D
             }
         }
     }
-    
 }

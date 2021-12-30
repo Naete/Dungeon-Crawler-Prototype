@@ -1,7 +1,8 @@
 using System.Collections.Generic;
-using LAIeRS.Miscellanious;
+
 using UnityEngine;
-using UnityEngine.Tilemaps;
+
+using LAIeRS.Miscellanious;
 
 namespace LAIeRS.DungeonGeneration
 {
@@ -9,10 +10,7 @@ namespace LAIeRS.DungeonGeneration
     {
         public GameObject GameObjectReference;
         
-        // TODO: Remove tilemaps and layouts
-        public Tilemap GroundTilemap;
-        public Tilemap ObstacleTilemap;
-        public Tilemap WallTilemap;
+        // TODO: Remove layouts
         public Grid2D<bool> GroundLayout;
         public Grid2D<bool> ObstacleLayout;
         public Grid2D<bool> WallLayout;
@@ -29,10 +27,6 @@ namespace LAIeRS.DungeonGeneration
         
         public Room2D(int roomWidth, int roomHeight, int roomPositionX, int roomPositionY)
         {
-            GroundTilemap = new Tilemap();
-            ObstacleTilemap = new Tilemap();
-            WallTilemap = new Tilemap();
-
             GroundLayout = new Grid2D<bool>(roomWidth, roomHeight, 1, 1, roomPositionX, roomPositionY);
             ObstacleLayout = new Grid2D<bool>(roomWidth, roomHeight, 1, 1, roomPositionX, roomPositionY);
             WallLayout = new Grid2D<bool>(roomWidth / 2, roomHeight / 2, 2, 2, roomPositionX, roomPositionY);

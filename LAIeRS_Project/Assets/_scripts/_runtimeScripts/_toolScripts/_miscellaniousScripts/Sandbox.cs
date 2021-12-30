@@ -7,34 +7,34 @@ namespace LAIeRS.Sandbox
 {
     public class Sandbox : MonoBehaviour
     {
-        [SerializeField] private List<Animator> doorAnimator;
+        [SerializeField] private List<Animator> blockadeAnimator;
     
         private void Awake()
         {
-            EventManager.AddListenerTo(EventID.ON_OPEN_DOORS, OpenDoor);
-            EventManager.AddListenerTo(EventID.ON_CLOSE_DOORS, CloseDoor);
+            EventManager.AddListenerTo(EventID.ON_RELEASE_BLOCKADE, ReleaseBlockade);
+            EventManager.AddListenerTo(EventID.ON_UNRELEASE_BLOCKADE, UnreleaseBlockade);
         }
 
-        private void OpenDoor()
+        private void ReleaseBlockade()
         {
-            foreach (var animator in doorAnimator)
+            foreach (var animator in blockadeAnimator)
             {
-                if (!animator.GetBool("IsOpen"))
+                if (!animator.GetBool("IsReleased"))
                 {
-                    animator.SetTrigger("DoorTrigger");
-                    animator.SetBool("IsOpen", true);
+                    animator.SetTrigger("BlockadeTrigger");
+                    animator.SetBool("IsReleased", true);
                 }
             }
         }
 
-        private void CloseDoor()
+        private void UnreleaseBlockade()
         {
-            foreach (var animator in doorAnimator)
+            foreach (var animator in blockadeAnimator)
             {
-                if (animator.GetBool("IsOpen"))
+                if (animator.GetBool("IsReleased"))
                 {
-                    animator.SetTrigger("DoorTrigger");
-                    animator.SetBool("IsOpen", false);
+                    animator.SetTrigger("BlockadeTrigger");
+                    animator.SetBool("IsReleased", false);
                 }
             }
         }

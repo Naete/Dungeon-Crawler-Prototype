@@ -21,11 +21,13 @@
                 <e p="GridDungeonGenerator2D.cs" t="Include" />
                 <e p="Room2D.cs" t="Include" />
                 <e p="RoomContentGenerator2D.cs" t="Include" />
-                <e p="Trigger2D.cs" t="Include" />
               </e>
               <e p="_monoBehaviourScripts" t="Include">
                 <e p="_ai_MBS" t="Include">
                   <e p="AIMovementController2D.cs" t="Include" />
+                </e>
+                <e p="_camera_MBS" t="Include">
+                  <e p="FollowObject.cs" t="Include" />
                 </e>
                 <e p="_levelGeneration_MBS" t="Include">
                   <e p="DungeonLevelCreator.cs" t="Include" />
@@ -42,6 +44,7 @@
                   <e p="PlayerMovementController2D.cs" t="Include" />
                 </e>
                 <e p="MovementEnhancer.cs" t="Include" />
+                <e p="Trigger2D.cs" t="Include" />
               </e>
             </e>
             <e p="_scriptableObjectScripts" t="Include">
@@ -68,7 +71,7 @@
             <e p="Project.asmdef" t="Include" />
           </e>
         </e>
-        <e p="Glossar.txt" t="Include" />
+        <e p="Term Abbreviations.txt" t="Include" />
       </e>
       <e p="LAIeRS_Project.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

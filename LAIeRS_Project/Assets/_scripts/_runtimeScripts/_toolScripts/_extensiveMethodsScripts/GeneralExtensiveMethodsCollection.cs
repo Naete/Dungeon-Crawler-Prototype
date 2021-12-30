@@ -16,13 +16,7 @@ namespace LAIeRS.ExtensiveMethods
         
         public static bool IsNotEqual<T>(this T a, T b) 
             => !a.Equals(b);
-        
-        public static bool IsNotNull<T>(this T variable) 
-            => variable != null;
-        
-        public static bool IsNull<T>(this T variable) 
-            => variable == null;
-        
+
         // TODO: Try out to create the randomizer instance inside this function
         public static T GetRandomItem<T>(this IList<T> itemList, Random randomizer)
             => itemList[randomizer.Next(0, itemList.Count)];
