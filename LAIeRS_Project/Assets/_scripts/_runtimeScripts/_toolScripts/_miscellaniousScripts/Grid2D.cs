@@ -14,8 +14,8 @@ namespace LAIeRS.Miscellanious
         public int Width { get; }
         public int Height { get; }
         
-        public int PosX { get; private set; }
-        public int PosY { get; private set; }
+        public int PositionX { get; private set; }
+        public int PositionY { get; private set; }
         
         private int _cellWidth { get; }
         private int _cellHeight { get; }
@@ -25,7 +25,7 @@ namespace LAIeRS.Miscellanious
         public Grid2D(
             int gridWidth, int gridHeight, 
             int cellWidth, int cellHeight, 
-            int gridPosX, int gridPosY, 
+            int gridPositionX, int gridPositionY, 
             Func<int, int, T> createGridItemAt = null)
         {
             _items = new T[gridWidth, gridHeight];
@@ -33,25 +33,26 @@ namespace LAIeRS.Miscellanious
             _cellHeight = cellHeight;
             Height = gridHeight;
             Width = gridWidth;
-            PosX = gridPosX;
-            PosY = gridPosY;
+            PositionX = gridPositionX;
+            PositionY = gridPositionY;
             
             FillOutGrid(createGridItemAt);
         }
         
+        // TODO: Add to visualizer class
         public void DrawGrid(Color color, float duration)
         {
             for (int y = 0; y < Height; y++)
                 for (int x = 0; x < Width; x++) {
-                    Vector2 cellBottomLeftCorner = GetPosAtIndex(x, y);
-                    Vector2 cellBottomRightCorner = GetPosAtIndex(x + 1, y);
-                    Vector2 cellTopLeftCorner = GetPosAtIndex(x, y + 1);
+                    Vector2 cellBottomLeftCorner = GetPositionAtIndex(x, y);
+                    Vector2 cellBottomRightCorner = GetPositionAtIndex(x + 1, y);
+                    Vector2 cellTopLeftCorner = GetPositionAtIndex(x, y + 1);
                     Debug.DrawLine(cellBottomLeftCorner, cellBottomRightCorner, color, duration);
                     Debug.DrawLine(cellBottomLeftCorner, cellTopLeftCorner, color, duration); }
 
-            Vector2 gridTopRightCorner = GetPosAtIndex(Width, Height);
-            Vector2 gridTopLeftCorner = GetPosAtIndex(0, Height);
-            Vector2 gridBottomRightCorner = GetPosAtIndex(Width, 0);
+            Vector2 gridTopRightCorner = GetPositionAtIndex(Width, Height);
+            Vector2 gridTopLeftCorner = GetPositionAtIndex(0, Height);
+            Vector2 gridBottomRightCorner = GetPositionAtIndex(Width, 0);
 
             Debug.DrawLine(gridTopRightCorner, gridTopLeftCorner, color, duration);
             Debug.DrawLine(gridTopRightCorner, gridBottomRightCorner, color, duration);
@@ -59,68 +60,76 @@ namespace LAIeRS.Miscellanious
         
         // TODO: Checkout if function is needed
         // TODO: Check out if "int casting" does lead to unexpected results
-        public void UpdateGridPos(float x, float y)
+        public void SetPosition(float gridPositionX, float gridPositionY)
         {
-            PosX = (int)x;
-            PosY = (int)y;
+            PositionX = (int)gridPositionX;
+            PositionY = (int)gridPositionY;
         }
         
         public void Foreach(Action<T> enumerationObject)
         {
-            for (int y = 0; y < Height - 1; y++)
+            for (int y = 0; y < Height - 1; y++) {
                 for (int x = 0; x < Width - 1; x++)
-                    enumerationObject(GetItemAtIndex(x, y));
+                {
+                    T item = GetItemAtIndex(x, y);
+                    
+                    if (item != null)
+                        enumerationObject(item);
+                }
+            }
         }
         
-        public T GetItemAtIndex(int x, int y)
+        public T GetItemAtIndex(int i, int j)
         {
-            if (x >= 0 && x < Width &&
-                y >= 0 && y < Height)
-                return _items[x, y];
+            if (i >= 0 && i < Width &&
+                j >= 0 && j < Height)
+                return _items[i, j];
             
             return default;
         }
         
-        public T GetItemAtPos(float x, float y)
+        public T GetItemAtPosition(float x, float y)
         {
-            (int x, int y) index = GetIndexAtPos(x, y);
-            return GetItemAtIndex(index.x, index.y);
+            (int i, int j) indexTuple = GetIndexAtPosition(x, y);
+            
+            return GetItemAtIndex(indexTuple.i, indexTuple.j);
         }
         
-        public void SetItemAtIndex(int x, int y, T item)
+        public void SetItemAtIndex(int i, int j, T item)
         {
-            if (x >= 0 && x < Width &&
-                y >= 0 && y < Height)
-                _items[x, y] = item;
+            if (i >= 0 && i < Width &&
+                j >= 0 && j < Height)
+                _items[i, j] = item;
         }
         
-        public void SetItemAtPos(float x, float y, T item)
+        public void SetItemAtPosition(float x, float y, T item)
         {
-            var index = GetIndexAtPos(x, y);
-            SetItemAtIndex(index.x, index.y, item);
+            (int i, int j) indexTuple = GetIndexAtPosition(x, y);
+            
+            SetItemAtIndex(indexTuple.i, indexTuple.j, item);
         }
         
-        public (int x, int y) GetIndexAtPos(float x, float y)
+        public (int x, int y) GetIndexAtPosition(float x, float y)
         {
-            x = Mathf.FloorToInt((x - PosX) / _cellWidth);
-            y = Mathf.FloorToInt((y - PosY) / _cellHeight);
+            x = Mathf.FloorToInt((x - PositionX) / _cellWidth);
+            y = Mathf.FloorToInt((y - PositionY) / _cellHeight);
 
             return ((int)x, (int)y);
         }
         
-        public Vector2 GetPosAtIndex(int x, int y, bool centering = false)
+        public Vector2 GetPositionAtIndex(int x, int y, bool centering = false)
         {
-            var pos = GetWorldPositionAtIndex(x, y);
+            (float x, float y) position = GetWorldPositionAtIndex(x, y);
 
             if (centering)
             {
                 float halfCellWidth = (float) _cellWidth / 2;
                 float halfCellHeight = (float) _cellHeight / 2;
-                pos.x += halfCellWidth;
-                pos.y += halfCellHeight;
+                position.x += halfCellWidth;
+                position.y += halfCellHeight;
             }
             
-            return new Vector2(pos.x, pos.y);
+            return new Vector2(position.x, position.y);
         }
         
         private void FillOutGrid(Func<int, int, T> createGridItemAt)
@@ -132,9 +141,9 @@ namespace LAIeRS.Miscellanious
                     _items[x, y] = createGridItemAt(x, y);
         }
         
-        private (float x, float y) GetWorldPositionAtIndex(int x, int y)
+        private (float x, float y) GetWorldPositionAtIndex(int i, int j)
         {
-            return (x * _cellWidth + PosX, y * _cellHeight + PosY);
+            return (i * _cellWidth + PositionX, j * _cellHeight + PositionY);
         }
     }
 }

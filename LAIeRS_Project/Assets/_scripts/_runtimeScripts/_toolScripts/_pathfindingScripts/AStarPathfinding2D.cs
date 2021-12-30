@@ -27,12 +27,15 @@ namespace LAIeRS.Pathfinding
             //(-1, -1), (1, -1), (-1, 1), (1, 1), // Diagonal
         };
 
-        public static List<Node2D> FindPath(float startPosX, float startPosY, float endPosX, float endPosY, Grid2D<Node2D> grid2D)
+        public static List<Node2D> FindPath(
+            float startPositionX, float startPositionY, 
+            float endPositionX, float endPositionY, 
+            Grid2D<Node2D> grid2D)
         {
             _grid2D = grid2D;
             
-            Node2D startNode = _grid2D.GetItemAtPos(startPosX, startPosY);
-            Node2D endNode = _grid2D.GetItemAtPos(endPosX, endPosY);
+            Node2D startNode = _grid2D.GetItemAtPosition(startPositionX, startPositionY);
+            Node2D endNode = _grid2D.GetItemAtPosition(endPositionX, endPositionY);
             
             if (startNode != null && endNode != null)
             {

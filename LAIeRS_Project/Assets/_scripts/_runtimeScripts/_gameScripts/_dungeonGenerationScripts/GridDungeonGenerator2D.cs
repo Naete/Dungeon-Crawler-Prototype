@@ -21,56 +21,52 @@ namespace LAIeRS.DungeonGeneration
             Vector2Int.up, Vector2Int.right, Vector2Int.down, Vector2Int.left
         };
         
-        public static Grid2D<Room2D> CreateDungeon(
-            int dungeonWidth, int dungeonHeight, int roomWidth, int roomHeight, int roomAmount, Vector2Int gridPos)
+        public static Grid2D<Room2D> CreateGridDungeon(
+            int dungeonWidth, int dungeonHeight, int roomWidth, int roomHeight, int roomAmount, Vector2Int gridPosition)
         {
             _roomList = new List<Room2D>();
             _roomQueue = new Queue<Room2D>();
             
             _randomizer = new Random();
             
-            Grid2D<Room2D> dungeon = 
-                new Grid2D<Room2D>(dungeonWidth, dungeonHeight, roomWidth, roomHeight, gridPos.x, gridPos.y);
+            Grid2D<Room2D> dungeonGrid = 
+                new Grid2D<Room2D>(dungeonWidth, dungeonHeight, roomWidth, roomHeight, gridPosition.x, gridPosition.y);
             
-            return GenerateProceduralDungeon(dungeon, roomWidth, roomHeight, roomAmount);
+            return GenerateProceduralDungeon(dungeonGrid, roomWidth, roomHeight, roomAmount);
         }
 
         private static Grid2D<Room2D> GenerateProceduralDungeon(
-            Grid2D<Room2D> dungeon, int roomWidth, int roomHeight, int amountOfRoomsToCreate)
+            Grid2D<Room2D> dungeonGrid, int roomWidth, int roomHeight, int amountOfRoomsToCreate)
         {
             // Adding the start room to the dungeon
-            AddRoomToDungeon(dungeon, new Room2D(roomWidth, roomHeight, 0, 0));
+            AddRoomToDungeon(dungeonGrid, new Room2D(roomWidth, roomHeight, 0, 0));
             
             while (_roomQueue.Any())
             {
                 Room2D selectedRoom = _roomQueue.Dequeue();
                 
-                List<Vector2Int> randomlyOrderedDirections = GetRandomlyOrderedDirections();
-                
-                foreach (Vector2Int direction in randomlyOrderedDirections)
+                foreach (Vector2Int direction in GetRandomlyOrderedDirections())
                 {
-                    if (_roomList.HasCountReached(amountOfRoomsToCreate)) break;
+                    if (_roomList.Count.IsGreaterOrEqual(amountOfRoomsToCreate)) break;
                     
-                    Vector2Int neighbourRoomPos = GetNeighbourRoomPosOf(selectedRoom, direction);
-                    Room2D neighbourRoom = dungeon.GetItemAtPos(neighbourRoomPos.x, neighbourRoomPos.y);
+                    Vector2Int neighbourRoomPosition = GetNeighbourRoomPositionOf(selectedRoom, direction);
+                    Room2D neighbourRoom = dungeonGrid.GetItemAtPosition(neighbourRoomPosition.x, neighbourRoomPosition.y);
                     
                     if (neighbourRoom != null)
                     {
-                        // TODO: Replace magic number "0.2f" by variable and remove the comment
-                        // Chance to connect the selected and neighbour room
-                        if (Utilities.DiceChance(0.2f) && selectedRoom.NeighbourRooms.NotContains(neighbourRoom))
+                        if (Utilities.DiceChance(GameSettings.CHANCE_CONNECT_ROOMS) 
+                            && selectedRoom.NeighbourRooms.NotContains(neighbourRoom))
                             ConnectRooms(selectedRoom, neighbourRoom);
                         
                         continue;
                     }
+
+                    if (Utilities.DiceChance(GameSettings.CHANCE_NOT_CREATE_ROOM)) continue;
                     
-                    // TODO: Replace magic number "0.5f" by variable and remove the comment
-                    // Chance to not create the neighbourRoom
-                    if (Utilities.DiceChance(0.5f)) continue;
+                    neighbourRoom = new Room2D(roomWidth, roomHeight, neighbourRoomPosition.x, neighbourRoomPosition.y);
                     
-                    neighbourRoom = new Room2D(roomWidth, roomHeight, neighbourRoomPos.x, neighbourRoomPos.y);
+                    AddRoomToDungeon(dungeonGrid, neighbourRoom);
                     
-                    AddRoomToDungeon(dungeon, neighbourRoom);
                     ConnectRooms(selectedRoom, neighbourRoom);
                 }
                 
@@ -78,12 +74,12 @@ namespace LAIeRS.DungeonGeneration
                     _roomQueue.Enqueue(_roomList.GetRandomItem(_randomizer));
             }
 
-            return dungeon;
+            return dungeonGrid;
         }
         
         private static void AddRoomToDungeon(Grid2D<Room2D> dungeon, Room2D room)
         {
-            dungeon.SetItemAtPos(room.Position.x, room.Position.y, room);
+            dungeon.SetItemAtPosition(room.Position.x, room.Position.y, room);
             
             _roomList.Add(room);
             _roomQueue.Enqueue(room);
@@ -102,11 +98,11 @@ namespace LAIeRS.DungeonGeneration
                 if (randomlyOrderedDirections.NotContains(direction))
                     randomlyOrderedDirections.Add(direction);
             }
-
+            
             return randomlyOrderedDirections;
         }
         
-        private static Vector2Int GetNeighbourRoomPosOf(Room2D selectedRoom, Vector2Int direction)
+        private static Vector2Int GetNeighbourRoomPositionOf(Room2D selectedRoom, Vector2Int direction)
         {
             return new Vector2Int(
                 selectedRoom.Position.x + (direction.x * selectedRoom.Width),
@@ -117,11 +113,6 @@ namespace LAIeRS.DungeonGeneration
         {
             roomA.NeighbourRooms.Add(roomB);
             roomB.NeighbourRooms.Add(roomA);
-        }
-        
-        private static bool HasCountReached(this List<Room2D> roomList, int targetNumber)
-        {
-            return roomList != null && roomList.Count == targetNumber;
         }
     }
 }

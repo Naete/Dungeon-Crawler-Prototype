@@ -1,5 +1,8 @@
+using System.Collections.Generic;
+
 using UnityEngine;
 
+using LAIeRS.ExtensiveMethods;
 using LAIeRS.Miscellanious;
 
 namespace LAIeRS.DungeonGeneration
@@ -7,26 +10,14 @@ namespace LAIeRS.DungeonGeneration
     public class DungeonLevelCreator : MonoBehaviour
     {
         private Grid2D<Room2D> _gridDungeon;
-
-        // TODO: Move the members to appropriate class
-        private int _dungeonSize;
-        [SerializeField] private int _roomWidth = 20;
-        [SerializeField] private int _roomHeight = 13;
-        [SerializeField] private int _roomAmount = 10;
-        private Vector2Int _gridPos;
         
-        // TODO: Remove start function
+        [SerializeField] private GameSettings _gameSettings;
+        [SerializeField] private List<GameObject> _testRoomPrefabs;
+        [SerializeField] private GameObject _testDoorPrefab;
+        
+        // TODO: Remove start function and generate levels through a level loader class
         private void Start()
         {
-            _dungeonSize = _roomAmount * 2;
-            
-            // Calculation to enable the dungeon generation to start from the grid center than left bottom corner
-            // NOTE: The dungeon generation is not depending on this calculation,
-            // so it can be removed when not needed anymore
-            _gridPos = new Vector2Int(
-                -_roomAmount * _roomWidth,
-                -_roomAmount * _roomHeight);
-            
             GenerateDungeonLevel();
         }
         
@@ -34,19 +25,15 @@ namespace LAIeRS.DungeonGeneration
         {
             // 1. Create grid-based dungeon
             _gridDungeon = GenerateGridDungeon(
-                _dungeonSize, _dungeonSize, 
-                _roomWidth, _roomHeight, 
-                _roomAmount, 
-                _gridPos);
+                _gameSettings.DungeonSize, _gameSettings.DungeonSize, 
+                _gameSettings.RoomWidth, _gameSettings.RoomHeight, 
+                _gameSettings.InitialRoomAmount, 
+                _gameSettings.InitialGridPosition);
             
+            _gridDungeon.DrawGrid(Color.black, 1000);
             
-            _gridDungeon.DrawGrid(Color.white, 1000);
-            
-            _gridDungeon.Foreach(room =>
-            {
-                if (room != null)
-                    Visualizer.DrawCircle(room.Position + new Vector2Int(room.Width / 2, room.Height / 2), 5, Color.red, 100);
-            });
+            ShowGridMap1();
+            //ShowGridMap2();
             
             // 2. Create cluster-based dungeon
             
@@ -56,17 +43,83 @@ namespace LAIeRS.DungeonGeneration
         }
         
         private Grid2D<Room2D> GenerateGridDungeon(
-            int dungeonWidth, int dungeonHeight, int roomWidth, int roomHeight, int roomAmount, Vector2Int gridPos)
-        {
-            Grid2D<Room2D> gridDungeon = GridDungeonGenerator2D.CreateDungeon(
+            int dungeonWidth, int dungeonHeight, int roomWidth, int roomHeight, int roomAmount, Vector2Int gridPosition)
+        { 
+            Grid2D<Room2D> gridDungeon = GridDungeonGenerator2D.CreateGridDungeon(
                     dungeonWidth, dungeonHeight, 
                     roomWidth, roomHeight, 
                     roomAmount, 
-                    gridPos);
+                    gridPosition);
+            
+            System.Random randomizer = new System.Random();
+            
+            // Generate rooms
+            gridDungeon.Foreach(room =>
+            {
+                room.GameObjectReference = Instantiate(_testRoomPrefabs.GetRandomItem(randomizer), (Vector2)room.Position, Quaternion.identity);
 
-            // Next steps: generate room content, triggers, ...
+                RoomContentGenerator2D.CreateEntrancesFor(room, doorPosition =>
+                {
+                    Instantiate(_testDoorPrefab, doorPosition, Quaternion.identity);
+                });
+            });
             
             return gridDungeon;
+        }
+        
+        private void ShowGridMap1()
+        {
+            Vector2 padding = new Vector2(4, 4);
+            
+            _gridDungeon.Foreach(room =>
+            {
+                Vector2 roomSize = new Vector2(_gameSettings.RoomWidth, _gameSettings.RoomHeight) - padding;
+                    
+                if (room.Position == Vector2Int.zero)
+                    Visualizer.DrawRectangleAt(
+                        room.Position + padding / 2,
+                        roomSize,
+                        Color.yellow, 
+                        100);
+                else
+                    Visualizer.DrawRectangleAt(
+                        room.Position + padding / 2,
+                        roomSize,
+                        Color.gray, 
+                        100);
+                    
+                foreach (Room2D neighbourRoom in room.NeighbourRooms)
+                    Visualizer.DrawLine(room.CenterPosition, neighbourRoom.CenterPosition, Color.white, 100);
+            });
+        }
+        
+        private void ShowGridMap2() 
+        {
+            _gridDungeon.Foreach(room =>
+            {
+                RoomContentGenerator2D.GenerateContentFor(room);
+                    
+                // Drawing 1x1 tiles
+                for (int y = 0; y < room.Height; y++) {
+                    for (int x = 0; x < room.Width; x++)
+                    {
+                        if (room.GroundLayout.GetItemAtIndex(x, y))
+                            Visualizer.DrawSquareAt(room.GroundLayout.GetPositionAtIndex(x, y), 1, Color.gray, 100);
+                    
+                        if (room.ObstacleLayout.GetItemAtIndex(x, y))
+                            Visualizer.DrawCircle(room.ObstacleLayout.GetPositionAtIndex(x, y) + new Vector2(0.5f, 0.5f), 0.5f, Color.red, 100);
+                    }
+                }
+                    
+                // Drawing 2x2 tiles
+                for (int y = 0; y < room.WallLayout.Height; y++) {
+                    for (int x = 0; x < room.WallLayout.Width; x++)
+                    {
+                        if (room.WallLayout.GetItemAtIndex(x, y))
+                            Visualizer.DrawSquareAt(room.WallLayout.GetPositionAtIndex(x, y), 2, Color.white, 100);
+                    }
+                }
+            });
         }
     }
 }

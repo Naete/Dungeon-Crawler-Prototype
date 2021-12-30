@@ -42,26 +42,8 @@ TagManager:
     uniqueID: 0
     locked: 0
   - name: Ground
-    uniqueID: 2486989571
+    uniqueID: 4008382533
     locked: 0
-  - name: Unwalkable
-    uniqueID: 3336104813
-    locked: 0
-  - name: Wall
-    uniqueID: 432641825
-    locked: 0
-  - name: Item
-    uniqueID: 3962089689
-    locked: 0
-  - name: Obstacle
+  - name: Ingame
     uniqueID: 1998231751
-    locked: 0
-  - name: Interactable
-    uniqueID: 4221591595
-    locked: 0
-  - name: NPC
-    uniqueID: 947258959
-    locked: 0
-  - name: Player
-    uniqueID: 802090695
     locked: 0

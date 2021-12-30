@@ -28,7 +28,7 @@ namespace LAIeRS.Miscellanious
         [SerializeField, Range(0, 1)] private float _chanceToWait = 0.5f; // TODO: Randomize chance to wait
 
         [Header("Monitoring")] 
-        [SerializeField] private Vector2 _currentTargetPos;
+        [SerializeField] private Vector2 _currentTargetPosition;
         [SerializeField] private Vector2 _currentDirection;
         
         private Rigidbody2D _rigidbody2DComponent;
@@ -65,7 +65,7 @@ namespace LAIeRS.Miscellanious
                 if (IsNotWalking()) 
                     _currentTask = AccelerateAsync(_target.position, _maxMovementSpeed);
                 
-                _currentTargetPos = _target.position;
+                _currentTargetPosition = _target.position;
                 _currentDirection = _rigidbody2DComponent.velocity.normalized;
                 
                 ChangeDirectionTo(directionOfTarget);
@@ -79,8 +79,8 @@ namespace LAIeRS.Miscellanious
 
             if (_showGizmo)
             {
-                Visualizer.DrawLine(transform.position, _currentTargetPos);
-                Visualizer.DrawCircle(_currentTargetPos, _decelerationTime, Color.yellow);
+                Visualizer.DrawLine(transform.position, _currentTargetPosition);
+                Visualizer.DrawCircle(_currentTargetPosition, _decelerationTime, Color.yellow);
                 Visualizer.DrawCircle(transform.position, _roamRadius);
                 Visualizer.DrawCircle(transform.position, _followRadius, Color.red);
             }
@@ -125,14 +125,14 @@ namespace LAIeRS.Miscellanious
         {
             _cancelTask = false;
 
-            Vector2 targetPos = GetRandomPosInRadius(radius, transform);
+            Vector2 targetPosition = GetRandomPositionInRadius(radius, transform);
 
-            _currentTargetPos = targetPos;
+            _currentTargetPosition = targetPosition;
             _currentDirection = _rigidbody2DComponent.velocity.normalized;
             
-            await AccelerateAsync(targetPos, maxMovementSpeed);
+            await AccelerateAsync(targetPosition, maxMovementSpeed);
     
-            while (Vector2.Distance(transform.position, targetPos) > _decelerationTime)
+            while (Vector2.Distance(transform.position, targetPosition) > _decelerationTime)
             {
                 if (_cancelTask)
                 {
@@ -148,44 +148,44 @@ namespace LAIeRS.Miscellanious
         
         private RaycastHit2D ExecuteRaycast(Vector2 targetPos, out Vector2 direction, LayerMask layerMask)
         {
-            Vector2 currentPos = transform.position;
+            Vector2 currentPosition = transform.position;
 
-            direction = currentPos.GetDirectionTo(targetPos);
-            float distance = currentPos.GetDistanceTo(targetPos);
+            direction = currentPosition.GetDirectionTo(targetPos);
+            float distance = currentPosition.GetDistanceTo(targetPos);
 
-            RaycastHit2D hitData = Physics2D.Raycast(currentPos, direction, distance, layerMask);
+            RaycastHit2D hitData = Physics2D.Raycast(currentPosition, direction, distance, layerMask);
             
             if (_showGizmo)
-                Visualizer.DrawLine(currentPos, hitData.point);
+                Visualizer.DrawLine(currentPosition, hitData.point);
 
             return hitData;
         }
         
-        private Vector2 GetRandomPosInRadius(float radius, Transform current)
+        private Vector2 GetRandomPositionInRadius(float radius, Transform current)
         {
-            Vector2 targetPos;
+            Vector2 targetPosition;
             Vector2 directionOfTarget;
             
-            do targetPos = Random.insideUnitCircle * radius + (Vector2)current.position;
-            while (ExecuteRaycast(targetPos, out directionOfTarget, _objectsToCollideWith));
+            do targetPosition = Random.insideUnitCircle * radius + (Vector2)current.position;
+            while (ExecuteRaycast(targetPosition, out directionOfTarget, _objectsToCollideWith));
 
-            return targetPos;
+            return targetPosition;
         }
         
-        private async Task AccelerateAsync(Vector2 targetPos, float maxMovementSpeed)
+        private async Task AccelerateAsync(Vector2 targetPosition, float maxMovementSpeed)
         {
             _cancelTask = false;
             
             float timeToEndAcceleration = Time.unscaledTime + _accelerationTime;
             
-            Vector2 direction = transform.position.GetDirectionTo(targetPos);
+            Vector2 direction = transform.position.GetDirectionTo(targetPosition);
             
             _rigidbody2DComponent.velocity = direction;
             
             Vector2 accelerationSpeed = direction * (maxMovementSpeed / _accelerationTime);
             
             while (Time.unscaledTime < timeToEndAcceleration 
-                   && Vector2.Distance(targetPos, transform.position) > 0.1f)
+                   && Vector2.Distance(targetPosition, transform.position) > 0.1f)
             {
                 if (_cancelTask)
                 {
@@ -201,7 +201,7 @@ namespace LAIeRS.Miscellanious
             _cancelTask = false;
         }
         
-        private async Task DecelerateAsync(Vector2 targetPos)
+        private async Task DecelerateAsync(Vector2 targetPosition)
         {
             _cancelTask = false;
             
@@ -212,7 +212,7 @@ namespace LAIeRS.Miscellanious
             Vector2 decelerationSpeed = direction * currentVelocity.magnitude / _decelerationTime;
             
             while (Time.unscaledTime < timeToEndDeceleration 
-                   && Vector2.Distance(targetPos, transform.position) > 0.01f)
+                   && Vector2.Distance(targetPosition, transform.position) > 0.01f)
             {
                 if (_cancelTask)
                 {

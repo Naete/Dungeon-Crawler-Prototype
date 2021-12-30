@@ -5,6 +5,7 @@
     <e p="C:\Users\BATES\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_LAIeRS_Project.-1217991628.00" t="ExcludeRecursive" />
     <e p="C:\Users\BATES\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
     <e p="S:\Unity Projekte\LAIeRS\LAIeRS_Project" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="_scripts" t="Include">
           <e p="_editorScript" t="Include">
@@ -16,21 +17,39 @@
           <e p="_runtimeScripts" t="Include">
             <e p="_gameScripts" t="Include">
               <e p="_dungeonGenerationScripts" t="Include">
+                <e p="Door2D.cs" t="Include" />
                 <e p="GridDungeonGenerator2D.cs" t="Include" />
                 <e p="Room2D.cs" t="Include" />
+                <e p="RoomContentGenerator2D.cs" t="Include" />
               </e>
               <e p="_monoBehaviourScripts" t="Include">
                 <e p="_ai_MBS" t="Include">
                   <e p="AIMovementController2D.cs" t="Include" />
                 </e>
+                <e p="_camera_MBS" t="Include">
+                  <e p="FollowObject.cs" t="Include" />
+                </e>
                 <e p="_levelGeneration_MBS" t="Include">
                   <e p="DungeonLevelCreator.cs" t="Include" />
+                </e>
+                <e p="_manager_MBS" t="Include">
+                  <e p="_eventManager_MBS" t="Include">
+                    <e p="EventID.cs" t="Include" />
+                    <e p="EventManager.cs" t="Include" />
+                    <e p="EventParam.cs" t="Include" />
+                  </e>
                 </e>
                 <e p="_player_MBS" t="Include">
                   <e p="PlayerIdentifier.cs" t="Include" />
                   <e p="PlayerMovementController2D.cs" t="Include" />
                 </e>
                 <e p="MovementEnhancer.cs" t="Include" />
+                <e p="Trigger2D.cs" t="Include" />
+              </e>
+            </e>
+            <e p="_scriptableObjectScripts" t="Include">
+              <e p="_gameSettings_SOS" t="Include">
+                <e p="GameSettings.cs" t="Include" />
               </e>
             </e>
             <e p="_toolScripts" t="Include">
@@ -40,6 +59,7 @@
               </e>
               <e p="_miscellaniousScripts" t="Include">
                 <e p="Grid2D.cs" t="Include" />
+                <e p="Sandbox.cs" t="Include" />
                 <e p="Utilities.cs" t="Include" />
                 <e p="Visualizer.cs" t="Include" />
               </e>
@@ -51,6 +71,7 @@
             <e p="Project.asmdef" t="Include" />
           </e>
         </e>
+        <e p="Term Abbreviations.txt" t="Include" />
       </e>
       <e p="LAIeRS_Project.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
