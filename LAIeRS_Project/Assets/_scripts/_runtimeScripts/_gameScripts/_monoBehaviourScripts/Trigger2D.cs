@@ -8,7 +8,7 @@ namespace LAIeRS.Events
     {
         public Vector2Int Position { get; }
         
-        [SerializeField] private EventID _eventID;
+        [SerializeField] public EventID _eventID;
         
         private void OnTriggerEnter2D(Collider2D other)
         {

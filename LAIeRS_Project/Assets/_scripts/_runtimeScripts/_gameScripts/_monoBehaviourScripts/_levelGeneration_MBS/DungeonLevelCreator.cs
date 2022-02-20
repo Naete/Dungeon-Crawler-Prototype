@@ -17,14 +17,23 @@ namespace LAIeRS.DungeonGeneration
         [SerializeField] private GameSettings _gameSettings;
         [SerializeField] private List<GameObject> _testRoomPrefabs;
         [SerializeField] private GameObject _testDoorPrefab;
+        [SerializeField] private GameObject _ladderPrefab;
+        [SerializeField] private GameObject _triggerPrefab;
         [SerializeField] private Tile _groundTile;
         [SerializeField] private Tile _unwalkableTile;
         [SerializeField] private TileBase _wallTile;
         
+        private List<Animator> _blockadeAnimators;
+
         // TODO: Remove start function and generate levels through a level loader class
         private void Start()
         {
+            _blockadeAnimators = new List<Animator>();
+            
             EventManager.AddListenerTo(EventID.ON_CROSSING, SwitchBetweenDungeons);
+            EventManager.AddListenerTo(EventID.ON_RELEASE_BLOCKADE, ReleaseBlockade);
+            EventManager.AddListenerTo(EventID.ON_UNRELEASE_BLOCKADE, UnreleaseBlockade);
+            
             GenerateDungeonLevel();
         }
         
@@ -70,8 +79,23 @@ namespace LAIeRS.DungeonGeneration
 
                 RoomContentGenerator2D.CreateEntrancesFor(room, doorPosition =>
                 {
-                    Instantiate(_testDoorPrefab, doorPosition, Quaternion.identity);
+                    GameObject door = Instantiate(_testDoorPrefab, doorPosition, Quaternion.identity);
+
+                    door.transform.parent = room.GameObjectReference.transform.Find("Grid 2x2").Find("Doors").transform;
+                    
+                    _blockadeAnimators.Add(door.GetComponent<Animator>());
                 });
+                
+                GameObject trigger = Instantiate(_triggerPrefab, room.CenterPosition + new Vector2(-2, -3), Quaternion.identity);
+                GameObject trigger2 = Instantiate(_triggerPrefab, room.CenterPosition + new Vector2(1, 2), Quaternion.identity);
+
+                trigger2.GetComponent<Trigger2D>()._eventID = EventID.ON_UNRELEASE_BLOCKADE;
+                
+                trigger.transform.parent =
+                    room.GameObjectReference.transform.Find("Grid 1x1").Find("Triggers").transform;
+                
+                trigger2.transform.parent =
+                    room.GameObjectReference.transform.Find("Grid 1x1").Find("Triggers").transform;
             });
 
             return gridDungeon;
@@ -103,6 +127,8 @@ namespace LAIeRS.DungeonGeneration
                         clusterDungeon[x + roomPositionInClusterDungeon.x, y + roomPositionInClusterDungeon.y] = true;
                     }
                 }
+                
+                Instantiate(_ladderPrefab, (Vector2)crossingRoom.CenterPosition, Quaternion.identity);
             }
             
             for (int y = 0; y < _gameSettings.ClusterDungeonHeigth; y++) {
@@ -114,20 +140,11 @@ namespace LAIeRS.DungeonGeneration
                         
                         if (emptyNeighbours.Count > 0)
                         {
-                            foreach (var positionOfNeighbour in emptyNeighbours)
-                            {
-                                _clusterDungeon.transform.Find("Walls").GetComponent<Tilemap>().SetTile(
-                                    new Vector3Int(
-                                        positionOfNeighbour.x - _gameSettings.ClusterDungeonWidth / 2, 
-                                        positionOfNeighbour.y - _gameSettings.ClusterDungeonHeigth / 2, 0),
-                                    _wallTile);
-                                
-                                _clusterDungeon.transform.Find("Ground").GetComponent<Tilemap>().SetTile(
-                                    new Vector3Int(
-                                        positionOfNeighbour.x - _gameSettings.ClusterDungeonWidth / 2, 
-                                        positionOfNeighbour.x - _gameSettings.ClusterDungeonHeigth / 2, 0),
-                                    _groundTile); 
-                            }
+                            _clusterDungeon.transform.Find("Walls").GetComponent<Tilemap>().SetTile(
+                                new Vector3Int(
+                                    x - _gameSettings.ClusterDungeonWidth / 2, 
+                                    y - _gameSettings.ClusterDungeonHeigth / 2, 0),
+                                _wallTile);
                         }
                         else
                         {
@@ -257,6 +274,30 @@ namespace LAIeRS.DungeonGeneration
             }
 
             return emptyNeighbours;
+        }
+        
+        private void ReleaseBlockade()
+        {
+            foreach (var animator in _blockadeAnimators)
+            {
+                if (!animator.GetBool("IsReleased"))
+                {
+                    animator.SetTrigger("BlockadeTrigger");
+                    animator.SetBool("IsReleased", true);
+                }
+            }
+        }
+        
+        private void UnreleaseBlockade()
+        {
+            foreach (var animator in _blockadeAnimators)
+            {
+                if (animator.GetBool("IsReleased"))
+                {
+                    animator.SetTrigger("BlockadeTrigger");
+                    animator.SetBool("IsReleased", false);
+                }
+            }
         }
     }
 }

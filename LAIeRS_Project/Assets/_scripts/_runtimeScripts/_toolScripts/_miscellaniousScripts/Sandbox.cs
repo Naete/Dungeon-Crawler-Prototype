@@ -8,13 +8,13 @@ namespace LAIeRS.Sandbox
     public class Sandbox : MonoBehaviour
     {
         [SerializeField] private List<Animator> blockadeAnimator;
-    
+        
         private void Awake()
         {
             EventManager.AddListenerTo(EventID.ON_RELEASE_BLOCKADE, ReleaseBlockade);
             EventManager.AddListenerTo(EventID.ON_UNRELEASE_BLOCKADE, UnreleaseBlockade);
         }
-
+        
         private void ReleaseBlockade()
         {
             foreach (var animator in blockadeAnimator)
@@ -26,7 +26,7 @@ namespace LAIeRS.Sandbox
                 }
             }
         }
-
+        
         private void UnreleaseBlockade()
         {
             foreach (var animator in blockadeAnimator)
