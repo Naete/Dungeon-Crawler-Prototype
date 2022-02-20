@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Random = UnityEngine.Random;
 
 using LAIeRS.DungeonGeneration;
 using LAIeRS.ExtensiveMethods;
-using Random = UnityEngine.Random;
 
 public static class RoomContentGenerator2D
 {
