@@ -17,10 +17,12 @@
           <e p="_runtimeScripts" t="Include">
             <e p="_gameScripts" t="Include">
               <e p="_dungeonGenerationScripts" t="Include">
+                <e p="CellularAutomata.cs" t="Include" />
                 <e p="Door2D.cs" t="Include" />
                 <e p="GridDungeonGenerator2D.cs" t="Include" />
                 <e p="Room2D.cs" t="Include" />
                 <e p="RoomContentGenerator2D.cs" t="Include" />
+                <e p="RoomType.cs" t="Include" />
               </e>
               <e p="_monoBehaviourScripts" t="Include">
                 <e p="_ai_MBS" t="Include">

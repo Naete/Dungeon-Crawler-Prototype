@@ -17,6 +17,8 @@ namespace LAIeRS.DungeonGeneration
         
         public List<Room2D> NeighbourRooms { get; }
         public List<Door2D> Doors { get; }
+
+        public RoomType Type { get; }
         
         public Vector2Int Position { get; }
         public Vector2Int CenterPosition => 
@@ -25,7 +27,7 @@ namespace LAIeRS.DungeonGeneration
         public int Width { get; }
         public int Height { get; }
         
-        public Room2D(int roomWidth, int roomHeight, int roomPositionX, int roomPositionY)
+        public Room2D(int roomWidth, int roomHeight, int roomPositionX, int roomPositionY, RoomType type)
         {
             GroundLayout = new Grid2D<bool>(roomWidth, roomHeight, 1, 1, roomPositionX, roomPositionY);
             ObstacleLayout = new Grid2D<bool>(roomWidth, roomHeight, 1, 1, roomPositionX, roomPositionY);
@@ -33,6 +35,8 @@ namespace LAIeRS.DungeonGeneration
             
             NeighbourRooms = new List<Room2D>();
             Doors = new List<Door2D>();
+
+            Type = type;
             
             Width = roomWidth;
             Height = roomHeight;
