@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 313976357232037295}
   - component: {fileID: 1266095617268415647}
   - component: {fileID: 4626855878275911025}
+  - component: {fileID: 7734982229571728376}
   - component: {fileID: 4222504368572123153}
   m_Layer: 8
   m_Name: Enemy_CharacterPrefab
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 947258959
-  m_SortingLayer: 7
+  m_SortingLayerID: 1998231751
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f5dc3d85df2daba49862ace3820bccc3, type: 3}
   m_Color: {r: 0.9433962, g: 0.12014952, b: 0.12014952, a: 1}
@@ -122,6 +123,25 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.4
+--- !u!114 &7734982229571728376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2743901597131843591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c10b540e9d5ef847aae6441a9b10c10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 2
+  target: {fileID: 2805423938631569340, guid: 86ca3f2906d96ef44bd2e1befebf5c57, type: 3}
+  objectsToCollideWith:
+    serializedVersion: 2
+    m_Bits: 1536
+  pathfindExecutionIntervall: 1
+  elapsedTime: 0
 --- !u!114 &4222504368572123153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,3 +166,5 @@ MonoBehaviour:
   _roamRadius: 3
   _timeToWait: 1.5
   _chanceToWait: 0.7
+  _currentTargetPosition: {x: 0, y: 0}
+  _currentDirection: {x: 0, y: 0}

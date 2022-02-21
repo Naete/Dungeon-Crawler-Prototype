@@ -23,53 +23,6 @@ public static class MovementEnhancer
             rigidbody2D.velocity *= Vector2.zero;
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     public static Task AccelerateAsync(this Rigidbody2D rigidbody, float duration, float targetSpeed,
         CancellationTokenSource token)
     {

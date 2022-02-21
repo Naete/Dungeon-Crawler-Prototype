@@ -27,6 +27,7 @@
               <e p="_monoBehaviourScripts" t="Include">
                 <e p="_ai_MBS" t="Include">
                   <e p="AIMovementController2D.cs" t="Include" />
+                  <e p="Pathfinder2D.cs" t="Include" />
                 </e>
                 <e p="_camera_MBS" t="Include">
                   <e p="FollowObject.cs" t="Include" />

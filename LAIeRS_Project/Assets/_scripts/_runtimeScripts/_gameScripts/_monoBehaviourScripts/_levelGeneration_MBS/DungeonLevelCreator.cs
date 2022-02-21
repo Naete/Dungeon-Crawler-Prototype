@@ -1,10 +1,11 @@
 using System.Collections.Generic;
-using LAIeRS.Events;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+using LAIeRS.Events;
 using LAIeRS.ExtensiveMethods;
 using LAIeRS.Miscellanious;
+using LAIeRS.Settings;
 
 namespace LAIeRS.DungeonGeneration
 {

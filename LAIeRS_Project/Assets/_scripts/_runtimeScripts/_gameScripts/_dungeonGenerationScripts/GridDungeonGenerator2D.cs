@@ -6,6 +6,7 @@ using UnityEngine;
 
 using LAIeRS.ExtensiveMethods;
 using LAIeRS.Miscellanious;
+using LAIeRS.Settings;
 
 namespace LAIeRS.DungeonGeneration
 {
