@@ -1,10 +1,13 @@
 Procedural Grid Based Dungeon Generation
+
 ![Procedural Grid Dungeon Generation](https://user-images.githubusercontent.com/95312706/155996680-2685081f-8557-4512-a9a9-7545625da351.gif)
 
 Cellular Automata Based Dungeon Generation
+
 ![Cellular Automata Dungeon Generation](https://user-images.githubusercontent.com/95312706/155995727-ed0ffb1c-92ab-4721-9e75-03fcaf6c5bc2.gif)
 
 Connected Dungeons
+
 ![Dungeon Passageways](https://user-images.githubusercontent.com/95312706/155995743-b1c9916e-3bd7-4d19-b2f9-a758df5a167d.gif)
 
 Pathfinding
